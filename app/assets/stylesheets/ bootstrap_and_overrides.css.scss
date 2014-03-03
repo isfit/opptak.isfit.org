@@ -1,0 +1,11 @@
+
+@import "bootstrap";
+body { padding-top: 60px; }
+
+.table-borderless td,
+.table-borderless th{ 
+    border: 0 !important
+}
+td {
+	text-align: center !important
+}

@@ -1,0 +1,650 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_tree . 
+ *= require_self
+*/
+
+html {
+  // Enable webkits anti-alized font-smoothing on Mac.
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body, div, aside, footer, header, span, h1, h2, h3, h4, h5, h6 {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  // background: url(http://i.imgur.com/fZYG2.jpg) center center no-repeat !important;
+  // background-attachment: fixed!important;
+  // -moz-background-size: cover!important;
+  // background-size: cover!important;
+
+}
+
+.hero-unit {
+  border-radius: 0px !important;
+}
+
+
+a {
+  color: rgb(216,52,21);
+  -webkit-transition: background .2s, color .2s;
+  -o-transition: background .2s, color .2s;
+  -moz-transition: background .2s, color .2s;
+  -ms-transition: background .2s, color .2s;
+  transition: background .2s, color .2s;
+}
+
+a.blue-link {
+  color: #333333;
+}
+
+.justified {
+  text-align: justify;
+}
+
+
+p a:hover {
+  background: rgb(216,52,21);
+  color: white;
+  text-decoration: none;
+}
+
+::-moz-selection { background: #D63416; color: #fff; text-shadow: none; }
+::selection { background: #D63416; color: #fff; text-shadow: none; }
+
+.carousel-control {
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+
+.carousel a {
+  color: white;
+}
+
+#sidebar div.promotional {
+  margin-bottom: 20px;
+}
+
+a {
+  color: rgb(216,52,21);
+  -webkit-transition: background .2s, color .2s;
+  -o-transition: background .2s, color .2s;
+  -moz-transition: background .2s, color .2s;
+  -ms-transition: background .2s, color .2s;
+  transition: background .2s, color .2s;
+}
+
+.navbar {
+//  border-top: 3px solid rgb(65,192,240);
+}
+
+#tabs > ul {
+  margin-left: 2em;
+  height: 55px;
+  padding-top: 5px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.navbar-inner {
+  background-color: white !important;
+  -webkit-background-image: none;
+  -moz-background-image: none;
+  -ms-background-image: none;
+  background-image: none;
+  filter: none !important;
+}
+
+a.brand,li.inactive a {
+  color: #000 !important;
+  text-shadow:none !important;
+}
+
+a.brand {
+  margin-top: 3px;
+}
+
+.nav .active > a, .navbar .nav .active > a:hover {
+  background-color: rgb(34,54,102) !important;
+}
+
+li.inactive a:hover {
+  color: white !important;
+}
+
+div.header-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  background: rgba(0,0,0,.4);
+  text-shadow: 0 1px 0 #333;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+  }
+}
+
+/* temporary hack (hopefully) */
+body {
+  padding-top: 85px;
+}
+
+.navbar-fixed-top {
+  margin-bottom: 0;
+}
+
+#sidebar img {
+  width: 100%;
+}
+
+.brand {
+  font-family: "apertura", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.85em !important;
+}
+#article-wrapper {
+}
+
+footer.main-footer {
+  padding-top: 1em;
+  margin-top: 4em !important;
+//  border-top: 1px dashed rgb(65,192,240);
+  text-align: center;
+}
+
+.facebook {
+  padding: 5px 0;
+}
+
+.fb-like-box {
+  width: 294px;
+  overflow: hidden;
+}
+
+.social {
+  height: 271px;
+}
+
+a.brand {
+  margin-left: 0 !important;
+}
+
+// GSC
+#navbar-search-wrapper {
+  max-width: 400px;
+  height: 50px;
+  position: relative;
+  top: 4px;
+}
+.gsc-control-cse {
+  padding: 0 !important;
+  height: 50px !important;
+}
+.gsc-resultsbox-visible {
+  position: absolute;
+  width:  400px;
+  background: white;
+  height: 400px;
+  overflow-y: scroll;
+  margin-top: -1em;
+}
+.gsc-above-wrapper-area {
+  display: none;
+}
+
+.promotional img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+.superscript { 
+  display: inline-block;
+  font-size: xx-small;
+  margin-top: -0.4em;
+  vertical-align: top;
+}
+
+#festival-blog, #theme-blog {
+  ul {
+    display: block;
+    margin: 0;
+
+    li {
+      display: block;
+
+      p {
+        line-height: 1em;
+      }
+    }
+  }
+
+ // opacity: 0;
+ // -webkit-transition: height .3s;
+ // -moz-transition: height .3s;
+ // -ms-transition: height .3s;
+ // -o-transition: height .3s;
+ // transition: height .3s;
+
+ // overflow: hidden;
+}
+
+
+#eco-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 120px;
+  border-radius: 12px;
+}
+
+
+
+
+
+#event-header {
+  height: 30em;
+  padding: 0; margin: 0;
+  //background: url('http://lorempixel.com/800/600/people') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position:relative;
+  right: 0;
+  margin-bottom: 2em;
+  max-width: 100%;
+
+  img {
+    width: 940px;
+    height: 480px;
+  }
+}
+
+
+#event-header .header-text {
+  position: absolute;
+  top: 0;
+  left: 65%;
+  width: 35%;
+  height: 100%;
+  color: white;
+  background: rgba(0,0,0,.7);
+  text-shadow: 0 1px 0 #333;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  overflow: hidden;
+
+  -webkit-transition: width .3s;
+  -o-transition: width .3s;
+  -ms-transition: width .3s;
+  -moz-transition: width .3s;
+  transition: width .3s;
+
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+  }
+}
+
+div.event-button.round {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  margin: auto;
+  cursor: pointer;
+  padding: 2.5em 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+div.event-button.round.disabled {
+  opacity: .6;
+}
+
+.tickets {
+  margin: 1em 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.tickets table {
+  margin: 1em 0;
+}
+
+.tickets table td:first-of-type {
+  font-weight: bold;
+  width: 10em;
+}
+
+
+
+/* Positioning */
+.absoluteCenter {
+ 
+}
+
+/* Sizing - resizes down to avoid cutting off */
+.absoluteCenter { /* Fallback Sizing */
+ max-height:100%;
+ max-width:100%;
+}
+
+
+.partners {
+
+  margin-bottom: 2em;
+
+  .partner-wrapper {
+    height: 92px;
+  }
+
+  .large {
+  }
+
+  .small {
+    margin-bottom: 1em;
+    height: 132px;
+  }
+
+  .center img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mini {
+    margin-bottom: 1em;
+    height: 84px;
+  }
+
+  .partnerlogo {
+    position:relative;
+    background: white;
+    text-align: center;
+    height: 100%;
+
+
+    img {
+      max-height: 100%;
+      margin:auto; /* Required */
+      position:absolute; /* Required */
+      top:0;bottom:0; /* Aligns Vertically */
+      left: 0;
+    }
+  }
+}
+
+#event-well {
+  a {
+    text-decoration: none;
+  }
+  .event-preview {
+    position: relative;
+    overflow: hidden;
+    height: 121px;
+
+    p.title {
+      background: #111;
+      color: white;
+      text-transform: uppercase;
+      text-align: right;
+      padding: .2em .5em;
+      margin: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 244px;
+    }
+
+    img {
+      border-radius: 0;
+      min-height: 100%;
+    }
+
+    .decor {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      position: absolute;
+      top: -2em;
+      left: -2em;
+      background: #D83415;
+      color: white;
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+      padding-left: 2.5em;
+      padding-top: 2.3em;
+
+
+      &.type1 {
+        background: rgb(56,192,240);
+      }
+
+      &.type2 {
+        background: rgb(4,129,185);
+      }
+
+      &.type3 {
+        background: rgb(34,54,102);
+      }
+
+      &.type4 {
+        background: rgb(216,52,21);
+      }
+
+      &.type5 {
+        background: rgb(251,188,58);
+      }
+
+      p {
+        margin: 0;
+        text-shadow: 0 1px 0 #333;
+      }
+    }
+  }
+}
+
+.attention {
+  color: white;
+  background: #111;
+  border: 0;
+  border-radius: 0;
+
+  h3 {
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: white;
+    display: block;
+    padding: .5em;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+
+#event-countdown-wrapper {
+  text-align: center;
+
+  h4 {
+    margin: 0;
+    font-size: 1em;
+    margin: 0 0 .5em 0;
+  }
+
+  .counter {
+    display: inline-block;
+    width: 22%;
+  }
+
+  #event-countdown-counters {
+    .number {
+      font-size: 1.5em;
+      line-height: 1em;
+      margin-bottom: 0;
+    }
+  }
+}
+
+#photo-contest {
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  .meta {
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    color: white;
+    background: rgba(0,0,0,.4);
+    bottom: 0;
+    left: 0;
+    padding-right: 1em;
+
+    p {
+      margin: 0;
+      text-shadow: 0 1px 0 #333;
+    }
+
+    span.theme {
+      font-style: italic;
+    }
+  }
+}
+
+
+
+
+.content-wrapper {
+  height: 100%;
+  z-index: 1;
+  background: rgb(34,54,102);
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-top: 85px;
+  box-shadow: 0 0 10px #222;
+}
+
+.main-footer {
+  z-index: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+body {
+  background: url(http://i.imgur.com/mU7FI.png);
+  padding-bottom: 150px;
+  padding-top: 0;
+}
+
+
+
+$videobox-height: 500px;
+
+.height-matching-no {
+  height: 172px;
+}
+
+.height-matching-en {
+  height: 160px;
+}
+
+
+.streambox {
+  color: white;
+  padding: 0;
+  background: #222;
+
+  h1 {
+    color: white;
+
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .clickwrapper {
+    margin-top: -10px;
+
+
+    padding: 10px 1em 10px 1em;
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  // h1, p, em {
+  //   margin: 0;
+  //   margin-top: -10px;
+
+  //   padding: 1em;
+  //   padding-top: ;
+  // }
+
+
+  #videobox {
+    height: 0;
+    overflow: hidden;
+
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    -o-transition: height .5s;
+    transition: height .5s;
+
+
+    &:target {
+      padding-top: 5em;
+      height: 580px;
+    }
+
+    iframe {
+      margin: auto;
+    }
+  }
+
+
+
+
+
+  .video-wrapper {
+
+    height: $videobox-height;
+    width: 720px;
+
+    margin: auto;
+    color: black;
+
+
+  }
+
+}
