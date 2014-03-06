@@ -1,6 +1,8 @@
 OpptakIsfitOrg::Application.routes.draw do
+  resources :positions
+
   resources :applicant_users
-  root to: "applicant_users#new"
+  root to: "positions#apply"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

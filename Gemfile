@@ -7,7 +7,7 @@ gem 'rails', '4.0.2'
 gem 'sqlite3'
 
 gem 'bootstrap-sass'
-
+gem 'mysql2'
 
 
 

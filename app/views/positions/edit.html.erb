@@ -1,0 +1,19 @@
+<div class="well">
+  <%if Position.published.count == 0 %>
+    <%if Language.to_s == "no"%>
+      ISFiT har for øyeblikket ikke opptak.
+    <%else%>
+      ISFiT does not have any open positions at the moment.
+    <%end%>
+  <%else%>
+    <% content_for :script do %>
+      <%= javascript_include_tag 'new_applicant' %>
+    <%end%>
+    <h2><%= t("position.form")%></h2>
+    <%= render 'partials/error', :locals=> {:model => @applicant} %>
+
+    <p><%= raw t("position.fill_in") %></p>
+
+    <%= render 'form' %>
+  <%end%>
+</div>
