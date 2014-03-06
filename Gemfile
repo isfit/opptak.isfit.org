@@ -10,7 +10,7 @@ gem 'bootstrap-sass'
 gem 'mysql2'
 gem 'simple_form'
 gem 'rails-i18n'
-
+gem 'pry'
 
 
 group :assets do

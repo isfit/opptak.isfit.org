@@ -1,6 +1,6 @@
 <div class="well">
   <% if @positions.count == 0 %>
-    <%if Language.to_s == "no"%>
+    <%if I18n.to_s == "no"%>
       ISFiT har for øyeblikket ikke opptak. 
     <%else%>
       ISFiT does not have any open positions at the moment.
@@ -9,7 +9,7 @@
     <h1 class="page-header"><%= t("position.motivational") %></h1>
 
     <div class="pull-right" style="margin-left: 1em;">
-      <%# link_to t("position.form"), new_applicant_user_path, class: "btn btn-primary btn-large"%>
+      <% link_to t("position.form"), new_applicant_user_path, class: "btn btn-primary btn-large"%>
     </div>
     <% if I18n.locale.to_s.eql?('no') %>
     <div class="lead"><%= raw format("Her finner du alle stillingsbeskrivelser for mellomlederopptaket 3. februar. Ved å klikke deg inn på den enkelte seksjon får du info om seksjonen samt de tilhørende stillingsbeskrivelsene. Søknadsfristen er nå ute, men du kan fortsatt lese om de forskjellige stillingene her.") %></div>

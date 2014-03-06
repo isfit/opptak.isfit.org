@@ -126,6 +126,8 @@ en:
   position:
     no_new_positions: "We do not currently have any open positions for volunteers. Please check back later."
     new_positions: "Currently ISFiT has admissions for the following positions"
+    back_button_positions: "Back to all positions"
+    back_button_sections: "Back to section"
     positions: "Positions"
     apply: "Volunteer now"
     form: "Application form"

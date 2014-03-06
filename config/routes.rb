@@ -1,8 +1,18 @@
 OpptakIsfitOrg::Application.routes.draw do
-  resources :positions
-
   resources :applicant_users
   root to: "positions#index"
+  
+  get 'section/:id'  => "positions#section", as: "positions_section"
+
+  resources :positions do
+    collection do
+      get :apply
+      post :validate
+      post :save
+    end
+  end 
+
+  #get 'apply/position' => "positions#index", as: "apply_positions"
   
 
   # The priority is based upon order of creation: first created -> highest priority.

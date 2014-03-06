@@ -33,4 +33,8 @@ class Position < ActiveRecord::Base
     I18n.locale.to_s.eql?("no") ? self.title_no : self.title_en
   end
 
+  def description
+    I18n.locale.to_s.eql?("no") ? self.description_no : self.description_en
+  end
+  
 end

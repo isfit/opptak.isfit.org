@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def set_locale
-      I18n.locale = :no
+      I18n.locale = :en
   end
 
 end
