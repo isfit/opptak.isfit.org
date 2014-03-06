@@ -103,5 +103,5 @@ private
 def positions_collected
   @positions = Position.published.includes(:groups).order("groups.section_id, groups.id,positions.title_no")
   @positions_collection = []
-  @positions.each { |p| @positions_collection << ["#{p.groups.first.name} - #{p.title}", p.id]} 
+  @positions.each { |p| @positions_collection << [t("#{p.groups.first.name_en} - #{p.title_en}"), p.id]} 
 end

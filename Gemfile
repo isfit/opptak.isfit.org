@@ -8,6 +8,8 @@ gem 'sqlite3'
 
 gem 'bootstrap-sass'
 gem 'mysql2'
+gem 'simple_form'
+gem 'rails-i18n'
 
 
 

@@ -4,7 +4,7 @@ class Position < ActiveRecord::Base
   belongs_to :group
 
 
-  lang_attr :title, :description
+  #lang_attr :title, :description
 
   def group
     self.groups.first
@@ -28,4 +28,9 @@ class Position < ActiveRecord::Base
       .joins(join_condition)
       .order(order_by)
   end
+
+  def title 
+    I18n.locale.to_s.eql?("no") ? self.title_no : self.title_en
+  end
+
 end
