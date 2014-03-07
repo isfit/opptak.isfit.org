@@ -11,6 +11,7 @@ gem 'mysql2'
 gem 'simple_form'
 gem 'rails-i18n'
 gem 'pry'
+gem 'bcrypt-ruby'
 
 
 group :assets do

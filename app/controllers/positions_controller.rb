@@ -51,9 +51,12 @@ def apply
     format.html { render :template => "positions/apply" }
   end
 end
+  def user_params
+    params.require(:applicant).permit()
+  end
 
  def save
-    @applicant = Applicant.new(params[:applicant])
+    @applicant = Applicant.new(user_params)
     new_user = false
 
     if current_user
@@ -62,6 +65,7 @@ end
       new_user = true
       @applicant_user = ApplicantUser.new({ mail: @applicant.mail })
       @password = @applicant_user.set_password
+      binding.pry
       if @applicant_user.save
         @applicant.applicant_user_id = @applicant_user.id
       else
@@ -107,5 +111,5 @@ private
 def positions_collected
   @positions = Position.published.includes(:groups).order("groups.section_id, groups.id,positions.title_no")
   @positions_collection = []
-  @positions.each { |p| @positions_collection << [t("#{p.groups.first.name_en} - #{p.title_en}"), p.id]} 
+  @positions.each { |p| @positions_collection << ["#{p.groups.first.name} - #{p.title}", p.id]} 
 end
