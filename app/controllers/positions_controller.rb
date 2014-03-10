@@ -56,7 +56,8 @@ end
   end
 
  def save
-    @applicant = Applicant.new(user_params)
+    params.permit!
+    @applicant = Applicant.new(params[:applicant])
     new_user = false
 
     if current_user
@@ -65,7 +66,6 @@ end
       new_user = true
       @applicant_user = ApplicantUser.new({ mail: @applicant.mail })
       @password = @applicant_user.set_password
-      binding.pry
       if @applicant_user.save
         @applicant.applicant_user_id = @applicant_user.id
       else
