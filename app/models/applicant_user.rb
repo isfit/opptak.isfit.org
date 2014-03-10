@@ -12,6 +12,7 @@ class ApplicantUser < ActiveRecord::Base
 
   def set_password
   	self.password = random_password
+    self.password_confirmation = self.password
     self.password
   end
 

@@ -11,6 +11,8 @@ OpptakIsfitOrg::Application.routes.draw do
       post :save
     end
   end 
+  get "/applicant_user", to: "applicant_users#show", as: :show_applicant_user
+
 
   #get 'apply/position' => "positions#index", as: "apply_positions"
   

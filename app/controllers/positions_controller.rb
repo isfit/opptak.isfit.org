@@ -51,13 +51,10 @@ def apply
     format.html { render :template => "positions/apply" }
   end
 end
-  def user_params
-    params.require(:applicant).permit()
-  end
+  
 
  def save
-    params.permit!
-    @applicant = Applicant.new(params[:applicant])
+    @applicant = Applicant.new(user_params)
     new_user = false
 
     if current_user
@@ -108,6 +105,10 @@ end
 end
 
 private
+def user_params
+  params.require(:applicant).permit!
+end
+
 def positions_collected
   @positions = Position.published.includes(:groups).order("groups.section_id, groups.id,positions.title_no")
   @positions_collection = []
