@@ -6,6 +6,7 @@ gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'sass-rails'   
 gem 'bootstrap-sass'
 gem 'mysql2'
 gem 'simple_form'
@@ -15,7 +16,6 @@ gem 'bcrypt-ruby'
 
 
 group :assets do
-  gem 'sass-rails'   
   gem 'coffee-rails', '~> 4.0.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes

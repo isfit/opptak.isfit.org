@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
       redirect_to signin_path
     end
   end
-  helper_method :require_signing!
+  helper_method :require_signin!
 
   def current_user
     @current_user ||= ApplicantUser.find(session[:user_id]) if session[:user_id]

@@ -22,9 +22,8 @@ class PositionsController < ApplicationController
 
   def update
     @applicant = Applicant.find(current_user.applicant.id)
-
     respond_to do |format|
-      if @applicant.update_attributes(params[:applicant])
+      if @applicant.update_attributes(user_params)
         format.html { redirect_to show_applicant_user_path, notice: 'Søknad oppdatert.' }
       else
         format.html { render action: "edit" }

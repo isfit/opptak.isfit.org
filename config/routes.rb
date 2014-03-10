@@ -11,8 +11,19 @@ OpptakIsfitOrg::Application.routes.draw do
       post :save
     end
   end 
+ get "/positions/edit/:id", to: "positions#edit"
+
   get "/applicant_user", to: "applicant_users#show", as: :show_applicant_user
 
+  get "/signin", to: "sessions#new"
+  post "/signin", to: "sessions#create"
+
+  get "/forgotten_password", to: "sessions#forgotten_password"
+  post "/forgotten_password", to: "sessions#new_password"
+
+  get "logout", to: "sessions#destroy"
+
+ # resources :applicant_users, except: [ :show, :destroy ]
 
   #get 'apply/position' => "positions#index", as: "apply_positions"
   

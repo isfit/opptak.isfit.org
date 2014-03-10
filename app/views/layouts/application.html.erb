@@ -78,39 +78,63 @@ html5boilerplate
     js.src = "//connect.facebook.net/nb_NO/all.js#xfbml=1&appId=111446192243028";
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="navbar navbar-fixed-top"> <!-- Start tabs -->
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to image_tag("Isfit2015veldigliten.jpg"), "http://isfit.org/", class: "brand" %>
-          <%= link_to image_tag("fb.png", width: "25px", hspace: "10px"), "http://www.facebook.com/pages/ISFiT/11541693212", class: "brand", target: "_blank" %>
-          <%= link_to image_tag("twi.png", width: "25px"), "https://twitter.com/isfit", class: "brand", target: "_blank" %>
 
-            <div id="fb-connect-topbar" class="pull-right">
-              <% if false %>
-              <!-- In case we should ever need this in the future -->
-                <p><a href="https://www.facebook.com/dialog/oauth?client_id=111446192243028&redirect_uri=http://www.isfit.org/oauth/callback&state=lolololololololol" target="_blank">Log in with Facebook</a></p>
-              <% # else %>
-                <p class="facebook-user-name"><%= session[:user].name %> </p>
-              <% end %>
 
-              <div id="navbar-icons">
-              </div>
-
-            </div>
-
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to image_tag("Isfit2015veldigliten.jpg"), "/", class: "navbar-brand" %>
         </div>
+        <div class="navbar-collapse collapse">
+
+          <% if current_user.nil? %>
+            <%= simple_form_for(:signin, url: signin_path, method: "POST", :defaults => { :input_html => { :class => "form-control" } },  :html => { :class => "navbar-form navbar-right" }) do |f| %>
+
+              <div class="form-group">
+                <%= f.input :mail, placeholder: "Epost", label: false %>
+              </div>
+              <div class="form-group">
+                <%= f.input :password, placeholder: "Passord", label: false %>
+              </div> 
+
+              <%= f.button :submit, "Sign in", class: "btn btn-primary" %>
+            <% end %>
+          <% else %>
+            <ul class="nav navbar-nav">
+              <li><%= link_to "Mine søknader", applicant_user_path(current_user.id)%></li>
+            </ul>
+
+            <p class="navbar-text navbar-right">
+            Logged in as 
+            <% if current_user.applicant.nil? %>
+              <%= current_user.mail %>
+            <% else %>
+              <%= current_user.applicant.full_name %>
+            <% end %> 
+            | <%= link_to "Logout" , logout_path %>
+            </p>
+          <% end %>
+        </div><!--/.navbar-collapse -->
       </div>
-    </div><!-- End tabs -->
+    </div>
 
 
 
   <div class="container">
     <!-- TODO sett inn notice og warnings her. Se på internal -->
     <% if notice or alert %>
+    <div class="row">
       <div class="alert alert-<%= notice ? "success":"error" %>">
         <a href="#" class="close" data-dismiss="alert">x</a>
         <strong><%= notice ? notice : raw(alert) %></strong>
       </div>
+    </div>
     <% end %>
     <div id="main-header">
         <%= yield :header %>
