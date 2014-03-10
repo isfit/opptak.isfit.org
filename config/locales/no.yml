@@ -1,0 +1,374 @@
+"no":
+  footer:
+    editor: "Redaktør"
+    copyright: Alt av skriftlig materiale og ISFiT-logoen er kopibeskyttet Stiftelsen ISFiT.
+  tabs:
+    mailing_lists: 'Maillister'
+    articles:
+      main: 'Nyheter'
+      photos: 'Foto'
+      archive: 'Arkiv'
+      galleries: 'Galleri'
+    positions:
+      main: 'Opptak'
+      info: 'Kontakt styret'
+      form: 'Stillingsbeskrivelser'
+      more_info: 'Informasjon'
+    theme:
+      main: 'Tema: Korrupsjon'
+      globaltrade: 'Global Handel'
+      workshops: 'Workshoper'
+      tradeyourideas: 'Trade Your Ideas'
+      themeblog: 'Temablogg'
+      previousthemes: 'Tidligere temaer'
+      corruption: 'Generelt'
+      map: 'Verdenskart'
+    about:
+      main: 'Om ISFiT'
+      whatisisfit: 'Hva er ISFiT?'
+      dialoguegroups: 'Dialoggruppene'
+      conflictareas: 'Konfliktområdene'
+      studentpeaceprice: 'Studentenes fredspris'
+      walkofpeace: 'Walk of Peace'
+      partners: 'Samarbeidspartnere'
+    info:
+      main: 'Informasjon'
+      participant: 'Deltakere'
+      volunteer: 'Frivillige'
+      press: 'Presse'
+      donate: 'Støtt en deltaker'
+      contact: 'Kontakt oss'
+      faq: 'Ofte stilte spørsmål'
+      host: 'Vert'
+      movies: 'Filmer'
+      images: 'Bilder'
+      media: 'ISFiT 2013 i media'
+    blogs:
+      main: 'Blogger'
+      theme: 'Temablogg'
+      festival: 'Festivalblogg'
+    languages:
+      main: 'Languages'
+  derp:
+    dialogue_groups: "Leter du etter dialoggruppene?"
+    participant: "Leter du etter deltakersøknader?"
+    apply_dialogue: "Søk om å bli med i dialoggruppene"
+    apply_participant: "Søk om å bli deltaker på ISFiT 2013 her"
+    isfit: "Vil du være frivillig?"
+    apply_isfit: "Søk om å være frivillig på ISFiT 2013"
+  call-to-action:
+    header: "Bli ISFiT-vert!"
+    paragraph: |
+      Som frivillig på ISFiT får du være med å planlegge og gjennomføre 
+      det som blir verdens største internasjonale studentfestival.
+      ISFiT er en av gjengene på [Studentersamfundet](http://www.samfundet.no)
+      og du får være med på all moroa det medbringer.  
+      Vi lover at det blir sosialt, gøy og engasjerende. Lover du å søke?<br>
+      __Søknadsfrist 31. oktober klokken 23:59.__
+    host_paragraph: |
+      Mer enn 450 deltakere kommer fra hele verden for å tilbringe elleve dager i
+      Trondheim der de skal bo hjemme hos våre verter. Ønsker du å oppleve
+      festivalen på en ny og spennende måte, og gjøre en forskjell? Da kan du
+      melde deg som ISFiT-vert, med virke i perioden 7. – 17. februar.
+    donate_now: "Donér!"
+    learn_more: "Les mer"
+    apply_now: "Søk nå!"
+  event:
+    information: "Informasjon"
+    type: "Type"
+    place: "Sted"
+    time: "Når"
+    price: "Prisinformasjon"
+    price_member: "Medlem"
+    price_other: "Andre"
+  press_accreditations:
+    header: "Presseakkreditering"
+    organization: "Mediebedrift:"
+    firstname: "Fornavn:"
+    surname: "Etternavn:"
+    function: "Funksjon:"
+    day_period: "Dag eller tidsrom:"
+    access_whole_festival: "Kryss av om du ønsker tilgang under hele festivalen:"
+    email: "Epost:"
+    phone: "Mobilnummer:"
+    birth: "Fødselsdato:"
+    remarks: "Merknader:"
+    submit: "Send"
+  donations:
+    amount: "Beløpet du vil donere i NOK"
+    donation_button: "Doner!"
+    donate: "Støtt en deltaker"
+  layout:
+    contact: "Kontakt"
+    press: "Presse"
+    read_more: "Les mer"
+    internal:  "Internal"
+    search: "Søk..."
+    media: "ISFiT i media"
+    back: "Tilbake"
+    show_all: "Vis alle"
+    date: "Februar 2015"
+    counter: 
+      event_countdown: 'Nedtelling til festivalstart'
+      minutes: 'min'
+      seconds: 'sek'
+      hours: 'timer'
+      days: 'dager'
+    event_alertbox: 
+      teaser:
+        header: 'Førslipp av festivalprogram'
+        subtitle: 'Les mer her!'
+      release: 
+        header: 'Programslipp'
+        subtitle: 'Les mer her!'
+      elise:
+        header: 'Sug kuk'
+        subtitle: 'og dø'
+    photo_contest:
+      title: 'Vinneren av fotokonkurransen:'
+      theme: 'vennskap'
+      name: 'Chathuraka Kaushalya'      
+  article:
+    header: "NYHETER"
+    more: "Flere saker"
+    header: "Siste nyheter"
+  participant:
+    must_match_passport: 'Navnet må stemme overens med navnet i passet ditt'
+    address_hint: ''
+    country_code: 'Husk landskoden'
+    travel_amount_hint: 'Beløpet du søker om (maksimum 3000 USD)'
+  position:
+    no_new_positions: "Vi har dessverre ingen opptak for tiden, men følg med på nettsiden for nye oppdateringer"
+    new_positions: "ISFiT har for øyeblikket opptak på følgende stillinger"
+    back_button_positions: "Tilbake til alle stillinger"
+    back_button_sections: "Tilbake til seksjon"
+    motivational: "Lyst til å lede noe stort?"
+    positions: "Stillinger"
+    apply: "Søk nå"
+    form: "Søk nå!"
+    login: 'Logg inn'
+    fill_in: |
+      Søknaden er for at vi skal bli litt kjent med deg.
+      Alle søkere vil bli innkalt til intervju og intervjuet
+      er det som teller i opptaksprosessen.<br/><br/>
+      Fyll ut samtlige felter under og klikk
+      på 'Søk nå!' for å levere søknaden.
+    submit: 'Søk nå!'
+    first_choice: "Førstevalg"
+    second_choice: "Andrevalg"
+    third_choice: "Tredjevalg"
+    obligatory: "Obligatorisk"
+    about_you: "Kan du fortelle litt om deg selv?"
+    background: "Har du tidligere hatt frivillige verv?"
+    hear_about: "Hvordan fikk du høre om ISFiT?"
+    mail: "Epost-adresse"
+    personal_info: Personlig informasjon
+    application: Søkerinformasjon
+    firstname: Fornavn
+  person:
+    first_name: "Fornavn"
+    last_name: "Etternavn"
+    address: "Adresse"
+    phone: "Telefonnummer"
+    phone_nor: "Telefonnummer, 8 siffer"
+    email: "E-postadresse (ved studiested)"
+    email_ntnu: "E-postadresse (ved studiested)"
+    birthyear: 'Fødselsår'
+    place_of_study: 'Universitet/høyskole'
+  project_support:
+    contact_person: "Kontaktperson"
+    project: "Prosjekt"
+    workshop: "Hvis Workshop ble valgt, spesifiser navnet til workshopen"
+  host:
+    registration: "Registrer deg som vert!"
+    optional: "Valgfrie felter"
+    mandatory: "Obligatoriske felter"
+  calender:
+    today: I dag
+    tomorrow: I morgen
+  simple_form:
+    labels:
+      applicant:
+        firstname: 'Fornavn'
+        lastname: 'Etternavn'
+        birthyear: 'Fødselsår'
+        place_of_study: 'Universitet/høyskole'
+        mail: 'E-postadresse (ved studiested)'
+        phone: 'Telefonnummer'
+        position_id_1: 'Førstevalg'
+        position_id_2: 'Andrevalg (valgfritt)'
+        position_id_3: 'Tredjevalg (valgfritt)'
+        information: 'Kan du fortelle litt om deg selv?'
+        background: 'Har du tidligere hatt frivillige verv?'
+        heardof: 'Hva er din motivasjon for å søke ISFiT?'
+      donation:
+        name: "Navn"
+        email: "E-post"
+        amount: "Beløp"
+      participant:
+        first_name: 'Fornavn'
+        last_name: 'Etternavn'
+        email: 'E-mail'
+        email_confirmation: 'E-mail confirmation'
+        address1: 'Address'
+        zipcode: 'Zipcode'
+        city: 'City'
+        country_id: 'Country'
+        phone: 'Phone'
+        birthdate: 'Birthdate'
+        sex: 'Sex'
+        university: 'University'
+        field_of_study: 'Field of study'
+        workshop1: '1st choice'
+        workshop2: '2nd choice'
+        workshop3: '3rd choice'
+        essay1: 'Essay 1'
+        essay2: 'Essay 2'
+        travel_essay: 'Travel essay'
+        travel_amount: 'Travel amount'
+      dialogue_participant:
+        first_name: 'First name'
+        last_name: 'Last name'
+        email: 'E-mail'
+        email_confirmation: 'E-mail confirmation'
+        address1: 'Address'
+        zipcode: 'Zipcode'
+        city: 'City'
+        country_id: 'Country'
+        nationality: 'Nationality'
+        passport: 'Passport'
+        phone: 'Phone'
+        birthdate: 'Birthdate'
+        sex: 'Sex'
+        university: 'University'
+        field_of_study: 'Field of study'
+        essay1: 'Essay 1'
+        essay2: 'Essay 2'
+        essay3: 'Essay 3'
+        essay4: 'Essay 4'
+      host:
+        first_name: Fornavn
+        last_name: Etternavn
+        address: Adresse
+        zipcode: Postnummer
+        place: Poststed
+        phone: Tlf
+        email: E-post
+        age: Din alder
+        number: Antall deltakere som kan bo hos deg
+        where: Hvor vil deltakeren(e) sove?
+        arrival_before: Deltakeren(e) kan komme en dag før (10. februar)
+        leave_late: Deltakeren(e) kan dra en dag senere (21. februar)
+        skies: Antall ski-par du kan låne bort til deltakeren(e)
+        preference: Preferanser (f.eks. kjønn, land, alder, språk, etc.)
+        vegetarian: Kan deltakeren(e) være vegetarianer?
+        smoker: Kan deltakeren(e) røyke?
+        pet: Hvis du har husdyr, hvilke husdyr har du?
+        animal_number: Hvis du har husdyr, hvor mange husdyr har du? 
+        language_speak: Hvilke språk snakker du?
+        before: Har du vært vert for ISFiT før?
+        know_isfit: Hvordan hørte du om ISFiT?
+        member_name: Navn på medlem (Besvares kun hvis 'medlem av ISFiT' er valgt)
+        other: Annen informasjon vi trenger å vite?
+        base: ""
+        student: "Kryss av om du er student"
+        submit: "Registrer verteskjema"
+  activerecord:
+    errors:
+      messages:
+        blank: må fylles ut
+        format: er i feil format
+        inclusion: må være valgt i gyldig mengde
+        invalid: har ikke riktig format
+        not_a_number: må bestå av tall
+        taken: er allerede registrert
+      models:
+        applicant:
+          attributes:
+            position_id_1:
+              not_a_number: må være valgt
+        host:
+          attributes:
+            age:
+              inclusion: må være mellom 18 og 100
+            number: 
+              inclusion: må være mellom 1 og 10
+        alumni_reservation:
+          attributes:
+            phone:
+    attributes:
+      firstname:
+        blank: "Tull"
+  errors:
+    description: "feil forhindret skjemaet fra å bli sendt"
+    count: "feil"
+  helpers:
+    submit:
+      alumni_reservation:
+        create: Send reservasjon
+    label:
+      project_support:
+        person_name: Navn
+        person_mail: E-post
+        person_age: Alder
+        person_association: Forbindelse med ISFiT
+        country: Land
+        group_description: Beskrivelse av organisasjon eller prosjektgruppe (maks 1000 tegn)
+        project_description: Beskrivelse av prosjektide (maks 2000 tegn)
+        funds_description: Oversikt over hva støtten fra ISFiT kan dekke (maks 1000 tegn)
+      wop_proposition:
+        firstname: Fornavn
+        lastname: Etternavn
+        address: Addresse
+        zipcode: Postnummer
+        study_place: Utdanningssted
+        phone: Telefonnummer
+        email: E-post
+        description: Beskrivelse 
+        base: ""
+      alumni_reservation:
+        firstname: Fornavn
+        surname: Etternavn
+        mail: E-post
+        isfit_year: År du var med på ISFiT
+        phone: Telefonnummer
+        restaurant: Restaurant lørdag
+        peaceprize_ceremony: Fredsprisseremoni
+        hybel_friday: Innslipp hyblene fredag
+        hybel_saturday: Innslipp hyblene lørdag
+      host:
+        first_name: Fornavn
+        last_name: Etternavn
+        address: Adresse
+        zipcode: Postnummer
+        place: Poststed
+        phone: Tlf
+        email: E-post
+        age: Din alder
+        number: Antall deltakere som kan bo hos deg
+        where: Hvor vil deltakeren(e) sove?
+        arrival_before: Deltakeren(e) kan komme en dag før (10. februar)
+        leave_late: Deltakeren(e) kan dra en dag senere (21. februar)
+        skies: Antall ski-par du kan låne bort til deltakeren(e)
+        preference: Preferanser (f.eks. kjønn, land, alder, språk, etc.)
+        vegetarian: Kan deltakeren(e) være vegetarianer?
+        smoker: Kan deltakeren(e) røyke?
+        pet: Hvis du har husdyr, hvilke husdyr har du?
+        animal_number: Hvis du har husdyr, hvor mange husdyr har du? 
+        language_speak: Hvilke språk snakker du?
+        before: Har du vært vert for ISFiT før?
+        know_isfit: Hvordan hørte du om ISFiT?
+        member_name: Navn på medlem (Besvares kun hvis 'medlem av ISFiT' er valgt)
+        why: Hvorfor vil du være vert?
+        base: ""
+      applicant:
+        firstname: Fornavn
+        lastname: Etternavn
+        mail: E-postadresse (ved studiested)
+        phone: Telefonnummer (8 siffer)
+        position_id_1: Førstevalg (obligatorisk)
+        position_id_2: Andrevalg (frivillig)
+        position_id_3: Tredjevalg (frivillig)
+        information: Informasjon om deg
+        background: Relevant bakgrunn
+        heardof: Motivasjon

@@ -1,0 +1,17 @@
+<div class="well">
+  <%if Position.published.count == 0 %>
+ 
+          <%=t 'position.no_new_positions' %>
+
+  <%else%>
+    <% content_for :script do %>
+      <%= javascript_include_tag 'new_applicant' %>
+    <%end%>
+    <h2><%= t("position.form")%></h2>
+    <%= render 'partials/error', :locals=> {:model => @applicant} %>
+
+    <p><%= raw t("position.fill_in") %></p>
+
+    <%= render 'form' %>
+  <%end%>
+</div>

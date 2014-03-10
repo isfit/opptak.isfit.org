@@ -1,6 +1,32 @@
 OpptakIsfitOrg::Application.routes.draw do
   resources :applicant_users
-  root to: "applicant_users#new"
+  root to: "positions#index"
+  
+  get 'section/:id'  => "positions#section", as: "positions_section"
+
+  resources :positions do
+    collection do
+      get :apply
+      post :validate
+      post :save
+    end
+  end 
+ get "/positions/edit/:id", to: "positions#edit"
+
+  get "/applicant_user", to: "applicant_users#show", as: :show_applicant_user
+
+  get "/signin", to: "sessions#new"
+  post "/signin", to: "sessions#create"
+
+  get "/forgotten_password", to: "sessions#forgotten_password"
+  post "/forgotten_password", to: "sessions#new_password"
+
+  get "logout", to: "sessions#destroy"
+
+ # resources :applicant_users, except: [ :show, :destroy ]
+
+  #get 'apply/position' => "positions#index", as: "apply_positions"
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

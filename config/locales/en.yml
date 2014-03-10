@@ -1,23 +1,267 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  footer:
+    editor: "Editor in Chief"
+    copyright: All written material and the ISFiT logo is copyrighted the ISFiT Foundation © 2013.
+  tabs:
+    mailing_lists: 'Mailing list'
+    articles:
+      main: 'News'
+      photos: 'Photos'
+      archive: 'Archive'
+      galleries: 'Galleries'
+    theme:
+      main: 'Theme 2015'
+      globaltrade: 'Global Trade'
+      workshops: 'Workshops'
+      tradeyourideas: 'Trade Your Ideas'
+      themeblog: 'Theme Blog'
+      previousthemes: 'Previous Themes'
+      corruption: 'Coming Soon'
+      map: 'World Map'
+    about:
+      main: 'About'
+      whatisisfit: 'What is ISFiT?'
+      dialoguegroups: 'Dialogue Groups'
+      conflictareas: 'Conflict Areas'
+      studentpeaceprice: 'Student Peace Prize'
+      walkofpeace: 'Walk of Peace'
+      partners: 'Partners'
+    info:
+      main: 'Info'
+      participant: 'Participant'
+      volunteer: 'Volunteer'
+      press: 'Press'
+      donate: 'Support a participant'
+      contact: 'Contact'
+      faq: 'FAQ'
+      host: 'Host'
+      movies: 'Movies'
+      images: 'Pictures'
+      media: 'ISFiT 2013 in the media'
+    blogs:
+      main: 'Blogs'
+      theme: 'Theme blog'
+      festival: 'Festival blog'
+    languages:
+      main: 'Languages'
+  derp:
+    dialogue_groups: "Looking for the Dialogue Groups?"
+    participant: "Looking for the participant applications?"
+    apply_dialogue: "Apply for the ISFiT 2013 Dialogue Groups"
+    apply_participant: "Apply to be a participant in ISFiT 2013"
+    isfit: "Do you want to volunteer?"
+    apply_isfit: "Apply to be a volunteer in ISFiT 2013"
+  call-to-action:
+    header: Be the change you want to see in the world
+    paragraph: | 
+      The purpose of ISFiT is to create and share innovative ideas to
+      change and improve the future. We do this by uniting young minds from
+      all over the world in [Trondheim, Norway](http://goo.gl/maps/4eLUZ), next February. 
+      Apply now, and become a part of it all.
+    apply_now: "Apply now"
+    learn_more: "Learn more"
+    blogs_header: "Have you read our blogs?"
+    blogs_paragraph: "Read more about what happens behind the scenes in ISFiT on <a href='http://isfit2013eng.blogspot.no/''>The Festival Blog</a>, and more about global trade on <a href='http://isfit.github.com/blog/en.html'>The Theme Blog</a>."
+  event:
+    information: "Information"
+    type: "Type"
+    place: "Place"
+    time: "When"
+    price: "Price information"
+    price_member: "Member"
+    price_other: "Other"
+  press_accreditations:
+    header: "Press accreditation"
+    organization: "Organization:"
+    firstname: "First name:"
+    surname: "Surname:"
+    function: "Function:"
+    day_period: "Day [DD.MM.YYYY] or period [DD.MM.YYYY - DD.MM.YYYY]:"
+    access_whole_festival: "Check off if you want access for the whole festival:"
+    email: "E-mail:"
+    phone: "Phone:"
+    birth: "Date of birth:"
+    remarks: "Remarks:"
+    submit: "Submit"
+  donations:
+    amount: "Amount you want to donate in NOK"
+    donation_button: "Donate!"
+    donate: "Support a participant"
+  layout:
+    contact: "Contact"
+    read_more: "Read More"
+    press: "Press"
+    internal:  "Internal"
+    search: "Search..."
+    media: "ISFiT in the media"
+    back: "Back"
+    show_all: "Show all"
+    date: "February 2015"
+    counter: 
+      event_countdown: 'Countdown to festival'
+      minutes: 'min'
+      seconds: 'sec'
+      hours: 'hours'
+      days: 'days'
+    event_alertbox:
+      teaser:
+        header: 'Sneak peek of the festival programme'
+        subtitle: 'Read more here!'
+      release: 
+        header: 'Festival programme release'
+        subtitle: 'Read more here!'
+    photo_contest:
+      title: 'The winner of the photo challenge:'
+      theme: 'friendship'
+      name: 'Chathuraka Kaushalya'
+  article:
+    header: "NEWS"
+    more: "More news"
+    header: "Latest news"
+  participant:
+    must_match_passport: 'Name must match passport name'
+    address_hint: 'Hint for the address?'
+    country_code: 'Add the country code'
+    travel_amount_hint: 'Amount of money that you are applying for(maximum $3000)'
+  position:
+    no_new_positions: "We do not currently have any open positions for volunteers. Please check back later."
+    new_positions: "Currently ISFiT has admissions for the following positions"
+    back_button_positions: "Back to all positions"
+    back_button_sections: "Back to section"
+    positions: "Positions"
+    apply: "Volunteer now"
+    form: "Application form"
+    fill_in: "Fill out all the fields to apply."
+    first_choice: "First choice"
+    second_choice: "Second choice"
+    third_choice: "Third choice"
+    obligatory: "Mandatory"
+    about_you: "General information about yourself"
+    background: "Relevant background"
+    hear_about: "How did you hear about ISFiT?"
+    motivational: Trade Your Ideas
+  person:
+    first_name: "Given name"
+    last_name: "Family name"
+    address: "Address"
+    phone: "Phone number"
+    phone_nor: "Phone number"
+    email: "Email address"
+    email_ntnu: "Email address (at place of study)"
+  project_support:
+    contact_person: "Contact person"
+    project: "Project"
+    workshop: "If Workshop was chosen, specify name of workshop"
+  host:
+    registration: Registration form
+    optional: Optional Fields
+    mandatory: Mandatory Fields
+  calender:
+    today: Today
+    tomorrow: Tomorrow
+  helpers:
+    label:
+      project_support:
+        person_name: Name
+        person_mail: Email
+        person_age: Age
+        person_association: Association with ISFiT
+        country: Country
+        group_description: Description of organization or project group (maximum 1000 signs)
+        project_description: Description of the project idea (maximum 2000 signs)
+        funds_description: Overview of what the funds from ISFiT might cover (maximum 1000 signs)
+      host:
+        first_name: "First name"
+        last_name: "Last name"
+        address: "Address"
+        phone: "Phone"
+        email: "Email address"
+        zipcode: "Zipcode"
+        place: "Place"
+        age: Your age
+        number: Number participants you would you like to host
+        where: Where will the participant(s) sleep?
+        arrival_before: Participant(s) may arrive one day earlier (February 10th)
+        leave_late: Participant(s) may stay one day longer (February 21th)
+        skies: Number of pairs of skies you have for participant(s) to loan
+        preferences: Preferences (e.g. gender, country, age, language, etc.)
+        vegetarian: Can the participant be vegetarian? 
+        smoker: Can the participant smoke?
+        pet: If you have animals, what kind of animals do you have? 
+        animal_number: If you have animals, how many do you have?   
+        language_speak: What languages do you speak?
+        before: Have been hosting for ISFiT before?
+        know_isfit: Have been hosting for ISFiT before?
+        member_name: Name of member (only if the option 'member of ISFiT' is chosen)
+        why: Why do you want to volunteer?
+        base: ""
+  simple_form:
+    labels:
+      applicant:
+        firstname: 'Given name'
+        lastname: 'Family name'
+        mail: 'Email (at place of study)'
+        phone: 'Phone number (8 numbers)'
+        position_id_1: 'First choice (required)'
+        position_id_2: 'Second choice (optional)'
+        position_id_3: 'Third choice (optional)'
+        information: 'About you'
+        background: 'Relevant background'
+        hear_about: 'How did you hear about ISFiT?'
+      donation:
+        name: "Name"
+        email: "E-mail"
+        amount: "Amount"
+      participant:
+        first_name: 'Given name'
+        last_name: 'Family name'
+        email: 'Email address'
+        email_confirmation: 'Confirm email address'
+        address1: 'Address'
+        zipcode: 'Zipcode'
+        city: 'City'
+        country_id: 'Country'
+        phone: 'Phone number'
+        birthdate: 'Date of birth'
+        sex: 'Sex'
+        university: 'University'
+        field_of_study: 'Field of study'
+        workshop1: '1st choice'
+        workshop2: '2nd choice'
+        workshop3: '3rd choice'
+        essay1: 'Essay 1'
+        essay2: 'Essay 2'
+        travel_essay: 'Travel essay'
+        travel_amount: 'Travel amount'
+      dialogue_participant:
+        first_name: 'First name'
+        last_name: 'Last name'
+        email: 'Email address'
+        email_confirmation: 'Confirm email address'
+        address1: 'Address'
+        zipcode: 'Zipcode'
+        city: 'City'
+        country_id: 'Country'
+        nationality: 'Nationality'
+        passport: 'Passport'
+        phone: 'Phone number'
+        birthdate: 'Date of birth'
+        sex: 'Sex'
+        university: 'University'
+        field_of_study: 'Field of study'
+        essay1: 'Essay 1'
+        essay2: 'Essay 2'
+        essay3: 'Essay 3'
+        essay4: 'Essay 4'
+  activerecord:
+    errors:
+      messages:
+      models:
+        host:
+          attributes:
+            age:
+              inclusion: must be between 18 and 100
+            number: 
+              inclusion: must be between 1 and 10
+
+

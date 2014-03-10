@@ -6,13 +6,18 @@ gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'sass-rails'   
 gem 'bootstrap-sass'
+gem 'mysql2'
+gem 'simple_form'
+gem 'rails-i18n'
+gem 'pry'
 
-
+# Use ActiveModel has_secure_password
+gem 'bcrypt-ruby'
 
 
 group :assets do
-  gem 'sass-rails'   
   gem 'coffee-rails', '~> 4.0.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -37,14 +42,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
-
 # Use unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

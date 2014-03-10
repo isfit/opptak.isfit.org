@@ -80,15 +80,61 @@ html5boilerplate
     }(document, 'script', 'facebook-jssdk'));</script>
 
 
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to image_tag("Isfit2015veldigliten.jpg"), "/", class: "navbar-brand" %>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <% if current_user.nil? %>
+            <%= simple_form_for(:signin, url: signin_path, method: "POST", :defaults => { :input_html => { :class => "form-control" } },  :html => { :class => "navbar-form navbar-right" }) do |f| %>
+
+              <div class="form-group">
+                <%= f.input :mail, placeholder: "Epost", label: false %>
+              </div>
+              <div class="form-group">
+                <%= f.input :password, placeholder: "Passord", label: false %>
+              </div> 
+
+              <%= f.button :submit, "Sign in", class: "btn btn-primary" %>
+            <% end %>
+          <% else %>
+            <ul class="nav navbar-nav">
+              <li><%= link_to "Mine søknader", applicant_user_path(current_user.id)%></li>
+            </ul>
+
+            <p class="navbar-text navbar-right">
+            Logged in as 
+            <% if current_user.applicant.nil? %>
+              <%= current_user.mail %>
+            <% else %>
+              <%= current_user.applicant.full_name %>
+            <% end %> 
+            | <%= link_to "Logout" , logout_path %>
+            </p>
+          <% end %>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
 
 
   <div class="container">
     <!-- TODO sett inn notice og warnings her. Se på internal -->
     <% if notice or alert %>
+    <div class="row">
       <div class="alert alert-<%= notice ? "success":"error" %>">
         <a href="#" class="close" data-dismiss="alert">x</a>
         <strong><%= notice ? notice : raw(alert) %></strong>
       </div>
+    </div>
     <% end %>
     <div id="main-header">
         <%= yield :header %>
