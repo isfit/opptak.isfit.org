@@ -1,6 +1,9 @@
 class AddColumnEmailAndPassowrdDigest < ActiveRecord::Migration
   def change
-  	  	add_column :applicant_users, :mail, :string
-  	  	add_column :applicant_users, :password_digest, :string
+    create_table :applicant_users do |t|
+      t.string :mail
+      t.string :password_digest
+
+      t.timestamps
   end
 end

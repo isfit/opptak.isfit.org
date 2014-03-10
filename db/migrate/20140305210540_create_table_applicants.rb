@@ -35,7 +35,7 @@ class CreateTableApplicants < ActiveRecord::Migration
     	t.string :place_of_study
     	t.integer :applicant_user_id
     	t.boolean :locked
-    	t.timestamps :created_at
+    	t.timestamps
     end
   end
 end
