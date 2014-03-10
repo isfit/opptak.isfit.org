@@ -14,10 +14,10 @@
 ActiveRecord::Schema.define(version: 20140307162618) do
 
   create_table "applicant_users", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "mail"
     t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "applicants", force: true do |t|
