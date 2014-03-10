@@ -30,6 +30,7 @@ end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'therubyracer'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -47,6 +48,7 @@ end
 
 # Use Capistrano for deployment
 gem 'capistrano', group: :development
+gem 'rvm-capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
