@@ -12,6 +12,8 @@ gem 'mysql2'
 gem 'simple_form'
 gem 'rails-i18n'
 gem 'pry'
+
+# Use ActiveModel has_secure_password
 gem 'bcrypt-ruby'
 
 
@@ -40,14 +42,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
-
 # Use unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
