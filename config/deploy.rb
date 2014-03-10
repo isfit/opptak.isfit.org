@@ -32,6 +32,7 @@ namespace :deploy do
   task :symlink_shared, :roles => :app do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/secret.yml #{release_path}/config/secret.yml"
+    run "ln -nfs #{shared_path}/config/secret.yml #{release_path}/config/initializers/secret_token.rb"
   end
 end
 before "whenever:update_crontab", "bundle:install"
