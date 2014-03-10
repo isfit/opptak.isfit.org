@@ -3,6 +3,8 @@ OpptakIsfitOrg::Application.routes.draw do
   root to: "positions#index"
   
   get 'section/:id'  => "positions#section", as: "positions_section"
+  get 'group/:id'  => "positions#group", as: "positions_group"
+
 
   resources :positions do
     collection do
