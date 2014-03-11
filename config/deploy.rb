@@ -1,7 +1,6 @@
 # RVM bootstrap
 #$:.unshift(File.expand_path("~/.rvm/lib"))
 require 'rvm/capistrano'
-require "whenever/capistrano"
 set :rvm_ruby_string, '1.9.3-p392'
 set :rvm_type, :user
 
@@ -33,6 +32,7 @@ namespace :deploy do
   task :symlink_shared, :roles => :app do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/secret.yml #{release_path}/config/secret.yml"
+    run "ln -nfs #{shared_path}/config/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
   end
 end
 before "whenever:update_crontab", "bundle:install"
