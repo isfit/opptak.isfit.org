@@ -60,7 +60,7 @@ html5boilerplate
 
 
   <!-- Typekit fonts. Yes, these are supposed to live in the head... -->
-  <script type="text/javascript" src="http://use.typekit.com/piu2mrs.js"></script>
+  <script type="text/javascript" src="https://use.typekit.com/piu2mrs.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <%=yield :head%>
@@ -89,10 +89,32 @@ html5boilerplate
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to image_tag("Isfit2015veldigliten.jpg"), "/", class: "navbar-brand" %>
+          <%= link_to image_tag("Isfit2015veldigliten.jpg"), "http://isfit.org", class: "navbar-brand" %>
         </div>
         <div class="navbar-collapse collapse">
-
+            <ul class="nav navbar-nav">
+            <!--
+              <%# if @sections.count > 0 %>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">
+                    Seksjoner
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                  <%# @sections.each do |section| %> 
+                    <li><%#= link_to section.name, positions_section_path(section) %></li>
+                  <%# end %>
+                  </ul>
+                  </li>
+              <%# end %>
+              -->
+                <li><%= link_to "Stillinger", positions_path %></li> 
+              <% if not current_user.nil? %>
+                <li>
+                  <%= link_to "Din søknad", applicant_user_path(current_user.id)%>
+                </li>
+              <% end %>
+            </ul>
           <% if current_user.nil? %>
             <%= simple_form_for(:signin, url: signin_path, method: "POST", :defaults => { :input_html => { :class => "form-control" } },  :html => { :class => "navbar-form navbar-right" }) do |f| %>
 
@@ -106,9 +128,7 @@ html5boilerplate
               <%= f.button :submit, "Sign in", class: "btn btn-primary" %>
             <% end %>
           <% else %>
-            <ul class="nav navbar-nav">
-              <li><%= link_to "Mine søknader", applicant_user_path(current_user.id)%></li>
-            </ul>
+            
 
             <p class="navbar-text navbar-right">
             Logged in as 

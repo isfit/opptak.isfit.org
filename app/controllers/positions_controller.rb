@@ -4,8 +4,10 @@ class PositionsController < ApplicationController
 
  def index
     @positions = Position.published.includes(:groups).order("groups.section_id, groups.id, positions.title_no")
+    
+    #@positions = Position.published.includes(:groups).order("groups.section_id, groups.id, positions.title_no")
     #@positions = Position.all_ordered_by_section_name_position_name
-    @research_group = Group.where(id: 159).first
+    #@research_group = Group.where(id: 159).first
   end
  
   def show
@@ -38,7 +40,7 @@ class PositionsController < ApplicationController
 
   def group
     @group = Group.find(params[:id])
-    @positions = @group.positions
+    @positions = @group.positions.published
   end
 
 def apply
@@ -66,6 +68,10 @@ end
         @applicant.applicant_user_id = @applicant_user.id
       else
         flash[:notice] = "Noe gikk galt. Har du allerede registrert med denne epostadressen? Hvis ikke kontakt orakel@isfit.org på epost."
+        @positions_collected = positions_collected
+        @referral_position = params[:referral_position]
+
+        #redirect_to action: :apply
         render action: :apply
         return
       end

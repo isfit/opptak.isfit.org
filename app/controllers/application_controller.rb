@@ -4,9 +4,19 @@ class ApplicationController < ActionController::Base
   helper :all
   protect_from_forgery with: :exception
   before_action :set_locale
+  #before_action :get_section
 
   def set_locale
       I18n.locale = :no
+  end
+  def get_section
+    positions = Position.published.includes(:groups).order("groups.section_id, groups.id, positions.title_no")
+    @sections = []
+    positions.each do |position|
+      if not @sections.include? position.groups.first.section
+         @sections << position.groups.first.section
+      end
+    end
   end
   private
   def require_signin!
