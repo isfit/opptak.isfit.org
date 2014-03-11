@@ -68,6 +68,10 @@ end
         @applicant.applicant_user_id = @applicant_user.id
       else
         flash[:notice] = "Noe gikk galt. Har du allerede registrert med denne epostadressen? Hvis ikke kontakt orakel@isfit.org på epost."
+        @positions_collected = positions_collected
+        @referral_position = params[:referral_position]
+
+        #redirect_to action: :apply
         render action: :apply
         return
       end
