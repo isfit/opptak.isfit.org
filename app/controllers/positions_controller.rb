@@ -40,7 +40,7 @@ class PositionsController < ApplicationController
 
   def group
     @group = Group.find(params[:id])
-    @positions = @group.positions
+    @positions = @group.positions.published
   end
 
 def apply
