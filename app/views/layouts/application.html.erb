@@ -93,28 +93,13 @@ html5boilerplate
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-            <!--
-              <%# if @sections.count > 0 %>
-                <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">
-                    Seksjoner
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                  <%# @sections.each do |section| %> 
-                    <li><%#= link_to section.name, positions_section_path(section) %></li>
-                  <%# end %>
-                  </ul>
-                  </li>
-              <%# end %>
-              -->
-                <li><%= link_to "Stillinger", positions_path %></li>
+                <li class="nav-link"><%= link_to "Stillinger", positions_path %></li>
               <% if current_user.nil? %>
-                <li>
+                <li class="nav-link">
                   <%= link_to "Søknadsskjema", apply_positions_path %>
                 </li>
               <% else %>
-                <li>
+                <li class="nav-link">
                   <%= link_to "Din søknad", applicant_user_path(current_user.id)%>
                 </li>
               <% end %>
