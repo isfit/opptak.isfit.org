@@ -29,21 +29,29 @@
       The descriptions of the available positions are written in Norwegian. 
       </p></div>
     <% end %>
-   <% active_group = nil %>
+    <% active_group = nil %>
     <% active_section = nil %>
+    <% communication_rendered = false %>
     <% for position in @positions %>
+      <% binding.pry if position.group.nil? %>
+      <% next if position.group.id.eql?(@research_group.id) %>
       <% if not position.group == active_group %>
         <% if not active_group.nil? %>
         </ul>
         </ul>
+      <% end %>
+      <% if position.group.section.eql?(@communication) %>
+        <%= render 'communication' if !communication_rendered %>
+        <% communication_rendered = true %>
+        <% next %>
       <% end %>
       <% if position.group and position.group.section and not position.group.section == active_section %>
         <%if not active_section.nil?%>
           </ul>
         <% end %>
         <h2 class="section_name"> <%= position.group.section.name %> </h2> <a class="show_more pull-right" id="<%= position.group.section.id %>">Beskrivelse av seksjon</a>
-        <div class ="panel panel-default">
-        <div class="section_info panel-body" id="<%= position.group.section.id %>">
+        <div class="panel panel-default">
+        <div class="section_info panel-body description-text" id="<%= position.group.section.id %>">
           <p><%= raw(position.group.section.description) %></p>
         </div>
         </div>
@@ -61,8 +69,6 @@
     <%end%>
   </ul>
   </ul>
-
-
-
+  <%= render 'research' %>
   <% end %>
 </div>

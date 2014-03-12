@@ -11,7 +11,8 @@ class PositionsController < ApplicationController
     
     #@positions = Position.published.includes(:groups).order("groups.section_id, groups.id, positions.title_no")
     #@positions = Position.all_ordered_by_section_name_position_name
-    #@research_group = Group.where(id: 159).first
+    @research_group = Group.find(159)
+    @communication = Section.find(22)
   end
  
   def show
@@ -39,6 +40,9 @@ class PositionsController < ApplicationController
 
   def section
     @section = Section.find(params[:id])
+    if !@section.id.eql?(22)
+      redirect_to root_path
+    end
     @positions = @section.positions
   end
 

@@ -2,7 +2,7 @@ OpptakIsfitOrg::Application.routes.draw do
   resources :applicant_users, except: [ :new]
   root to: "positions#index"
   
-  get 'section/:id'  => "positions#section", as: "positions_section"
+  get 'section/:id'  => "positions#section", as: "section"
   get 'group/:id'  => "positions#group", as: "positions_group"
 
 

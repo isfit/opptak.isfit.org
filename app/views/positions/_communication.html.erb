@@ -1,0 +1,8 @@
+<h2 class="section_name"><%= link_to @communication.name_no, @communication %></h2>
+<hr style="height:3px;border:none;color:#D0D0D0;background-color:#D0D0D0;" />
+
+<ul class="list-unstyled">
+<% @communication.positions.published.order(:title_no).each do |position| %>
+	<li><h4><%=link_to position.title, position_path(position.id) %></h4></li>
+<% end %>
+</ul>
