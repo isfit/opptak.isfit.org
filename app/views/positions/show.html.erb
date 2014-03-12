@@ -4,6 +4,6 @@
 		<%= link_to t('position.back_button_sections'), positions_section_path(@position.group.section_id), :class => "btn btn-info" if !@position.group.section_id.nil? %>
 	</div>
 
-  <h2><%= @position.title %></h2>
-  <div class="justified"><%=raw format(@position.description) %></div>
+  <h2 class="position-name"><%= @position.title %></h2>
+  <div class="justified position-text"><%=raw format(@position.description) %></div>
 </div>
