@@ -108,8 +108,12 @@ html5boilerplate
                   </li>
               <%# end %>
               -->
-                <li><%= link_to "Stillinger", positions_path %></li> 
-              <% if not current_user.nil? %>
+                <li><%= link_to "Stillinger", positions_path %></li>
+              <% if current_user.nil? %>
+                <li>
+                  <%= link_to "Søknadsskjema", apply_positions_path %>
+                </li>
+              <% else %>
                 <li>
                   <%= link_to "Din søknad", applicant_user_path(current_user.id)%>
                 </li>
