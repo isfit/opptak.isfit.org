@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140307162618) do
+ActiveRecord::Schema.define(version: 20140313195526) do
 
   create_table "applicant_users", force: true do |t|
     t.string   "mail"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140307162618) do
     t.integer  "interviewer_id_2_1"
     t.integer  "interviewer_id_2_2"
     t.integer  "interviewer_id_3_1"
+    t.integer  "interviewer_id_3_2"
     t.boolean  "deleted",            default: false
     t.string   "username"
     t.string   "password"
