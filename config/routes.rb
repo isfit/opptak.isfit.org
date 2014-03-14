@@ -13,7 +13,8 @@ OpptakIsfitOrg::Application.routes.draw do
       post :save
     end
   end 
- get "/positions/edit/:id", to: "positions#edit"
+  get "/positions/edit/:id", to: "positions#edit"
+  get "it-utvikler", to: "positions#show", defaults: { id: 513 }
 
   get "/applicant_user", to: "applicant_users#show", as: :show_applicant_user
 
