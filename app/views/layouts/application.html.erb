@@ -103,6 +103,7 @@ html5boilerplate
               <% end %>
             </ul>
           <% if current_user.nil? %>
+            <%= link_to "Nytt passord", forgotten_password_path, class: "btn btn-primary navbar-btn navbar-right" %>
             <%= simple_form_for(:signin, url: signin_path, method: "POST", :defaults => { :input_html => { :class => "form-control" } },  :html => { :class => "navbar-form navbar-right" }) do |f| %>
 
               <div class="form-group">
@@ -112,7 +113,7 @@ html5boilerplate
                 <%= f.input :password, placeholder: "Passord", label: false %>
               </div> 
 
-              <%= f.button :submit, "Sign in", class: "btn btn-primary" %>
+              <%= f.button :submit, "Logg inn", class: "btn btn-primary" %>
             <% end %>
           <% else %>
             
