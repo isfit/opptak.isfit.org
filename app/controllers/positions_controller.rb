@@ -17,6 +17,8 @@ class PositionsController < ApplicationController
  
   def show
     @position = Position.find_by_id(params[:id])
+
+    redirect_to positions_path if @position.nil?
     #unless Position.published.all.include?(@position)
     #  redirect_to opptak_path, :notice => "That position does not exist"
     #end
