@@ -54,13 +54,19 @@ class PositionsController < ApplicationController
   end
 
 def apply
-  @applicant = Applicant.new
-  @positions_collected = positions_collected
-  @referral_position = params[:referral_position]
+  if current_user.nil? || current_user.application_any?
+    @applicant = Applicant.new
+    @positions_collected = positions_collected
+    @referral_position = params[:referral_position]
 
-  respond_to do |format|
-    format.html { render :template => "positions/apply" }
+    respond_to do |format|
+      format.html { render :template => "positions/apply" }
+    end
+  else
+    flash[:notice] = "Du har allerede registrert en søknad. Hvis ikke kontakt orakel@isfit.org på epost."
+    redirect_to root_path
   end
+
 end
   
 
