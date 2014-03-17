@@ -22,6 +22,11 @@ class Applicant < ActiveRecord::Base
     end
   end
 
+  def lock
+    self.locked = true
+    self.save
+  end
+
   def full_name
     "#{firstname} #{lastname}"
   end

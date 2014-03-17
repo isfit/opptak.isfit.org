@@ -1,5 +1,4 @@
-
-<%= simple_form_for(@applicant, :input_html => {:class => 'form-horizontal', :role => 'form' }, url: {:controller => :positions, :action => :save}) do |f| %>
+<%= simple_form_for(@applicant, defaults: { :disabled => @applicant.locked }, :input_html => {:class => 'form-horizontal', :role => 'form' }, url: {:controller => :positions, :action => :save}) do |f| %>
 <div class="row">
 <div class="col-md-4">
   <fieldset>
@@ -103,8 +102,8 @@
     </div>
 </div>
 </div>
-
+  <% if not @applicant.locked %>
   <center><%= f.button 'submit',:value => t("position.submit"), class: "btn btn-large btn-primary" %></center>
-
+  <% end %>
 <% end %>
 

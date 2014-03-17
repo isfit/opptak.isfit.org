@@ -32,13 +32,26 @@ class PositionsController < ApplicationController
   def update
     @applicant = Applicant.find(current_user.applicant.id)
     respond_to do |format|
-      if @applicant.update_attributes(user_params)
+      if @applicant.locked
+        format.html { redirect_to show_applicant_user_path, notice: "Denne søknaden er låst! Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost." }
+      elsif @applicant.update_attributes(user_params)
         format.html { redirect_to show_applicant_user_path, notice: 'Søknad oppdatert.' }
       else
         format.html { render action: "edit" }
       end
     end
   end
+
+  def lock
+    @applicant = Applicant.find(params[:id])
+    @applicant.lock
+    @positions_collection = positions_collected
+
+    flash[:notice] = "Søknaden er nå låst. Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost."
+    #redirect_to action: :apply
+    redirect_to show_applicant_user_path(@applicant)
+  end
+
 
   def section
     @section = Section.find(params[:id])
@@ -66,8 +79,14 @@ end
 
  def save
     @applicant = Applicant.new(user_params)
+    @positions_collected = positions_collected
+    @referral_position = params[:referral_position]
     new_user = false
 
+    if @applicant.locked
+      flash[:notice] = "Denne søknaden er låst! Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost."
+      redirect_to show_applicant_user_path(@applicant)
+    end
     if current_user
       @applicant.applicant_user_id = current_user.id
     else
@@ -78,9 +97,6 @@ end
         @applicant.applicant_user_id = @applicant_user.id
       else
         flash[:notice] = "Noe gikk galt. Har du allerede registrert med denne epostadressen? Hvis ikke kontakt orakel@isfit.org på epost."
-        @positions_collected = positions_collected
-        @referral_position = params[:referral_position]
-
         #redirect_to action: :apply
         render action: :apply
         return

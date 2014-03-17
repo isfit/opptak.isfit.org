@@ -1,3 +1,8 @@
+<% if @applicant.locked %>
+<p>Denne søknaden er låst. Hvis du vil åpne søknaden igjen kan du kontakte orakel@isfit.org</p>
+<% else %>
+<p>Her kan du lese, endre og låse din søknad. Hvis du låser søknaden vil du <em>ikke</em> ha mulighet for å endre den senere. Når du har låst søknaden kan vi kontakte deg for intervju før søknadsfristen har gått ut.</p>
+<% end %>
 <h3>Din søknad</h3>
 <b>Navn:</b>
 <p><%= @applicant.full_name %></p>
