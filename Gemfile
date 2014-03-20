@@ -16,6 +16,8 @@ gem 'pry'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby'
 
+# Exception mailer
+gem 'exception_notification'
 
 group :assets do
   gem 'coffee-rails', '~> 4.0.1'
