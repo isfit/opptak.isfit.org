@@ -77,4 +77,13 @@ OpptakIsfitOrg::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Exception mailer
+  config.middleware.use ExceptionNotification::Rack,
+  :email => {
+    :email_prefix => "[Exception in opptak.isfit.org] ",
+    :sender_address => %{"Exceptional bot" <exceptional@isfit.org>},
+    :exception_recipients => %w{exceptional@isfit.org}
+  }
+
 end
