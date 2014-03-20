@@ -16,6 +16,11 @@ class ApplicantUser < ActiveRecord::Base
     self.password
   end
 
+
+  def application_any?
+    self.applicant.nil?
+  end
+
   private
   def random_password(size = 8)
   	chars = ['A'..'Z', 'a'..'z', '0'..'9'].collect(&:to_a).reduce(:+)
