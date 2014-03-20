@@ -4,9 +4,9 @@
           <%=t 'position.no_new_positions' %>
 
   <%else%>
-    <% content_for :script do %>
-      <%= javascript_include_tag 'new_applicant' %>
-    <%end%>
+    <%# content_for :script do %>
+      <%#= javascript_include_tag 'new_applicant' %>
+    <%#end%>
     <h2><%= t("position.form")%></h2>
     <%= render 'partials/error', :locals=> {:model => @applicant} %>
 
