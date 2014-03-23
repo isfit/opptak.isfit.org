@@ -2,7 +2,7 @@
 class PositionsController < ApplicationController
   before_filter :require_signin!, only: [:edit, :update, :lock, :locked]
 
- def index
+  def index
     @positions = Position
       .published
       .includes(:groups)
@@ -25,8 +25,9 @@ class PositionsController < ApplicationController
   end
 
   def edit
-   @applicant = Applicant.find(params[:id])
-   @positions_collection = positions_collected
+    @applicant_user = ApplicantUser.find(current_user)
+    @applicant      = @applicant_user.applicant
+    @positions_collection = positions_collected
   end
 
   def update
@@ -43,13 +44,14 @@ class PositionsController < ApplicationController
   end
 
   def lock
-    @applicant = Applicant.find(params[:id])
+    @applicant_user = ApplicantUser.find(current_user)
+    @applicant      = @applicant_user.applicant
     @applicant.lock
     @positions_collection = positions_collected
 
     flash[:notice] = "Søknaden er nå låst. Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost."
     #redirect_to action: :apply
-    redirect_to show_applicant_user_path(@applicant)
+    redirect_to show_applicant_user_path
   end
 
 
@@ -66,21 +68,21 @@ class PositionsController < ApplicationController
     @positions = @group.positions.published
   end
 
-def apply
-  if current_user.nil? || current_user.application_any?
-    @applicant = Applicant.new
-    @positions_collected = positions_collected
-    @referral_position = params[:referral_position]
+  def apply
+    if current_user.nil? || current_user.application_any?
+      @applicant = Applicant.new
+      @positions_collected = positions_collected
+      @referral_position = params[:referral_position]
 
-    respond_to do |format|
-      format.html { render :template => "positions/apply" }
+      respond_to do |format|
+        format.html { render :template => "positions/apply" }
+      end
+    else
+      flash[:notice] = "Du har allerede registrert en søknad. Hvis ikke kontakt orakel@isfit.org på epost."
+      redirect_to root_path
     end
-  else
-    flash[:notice] = "Du har allerede registrert en søknad. Hvis ikke kontakt orakel@isfit.org på epost."
-    redirect_to root_path
-  end
 
-end
+  end
   
 
  def save
@@ -91,7 +93,7 @@ end
 
     if @applicant.locked
       flash[:notice] = "Denne søknaden er låst! Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost."
-      redirect_to show_applicant_user_path(@applicant)
+      redirect_to show_applicant_user_path
     end
     if current_user
       @applicant.applicant_user_id = current_user.id
