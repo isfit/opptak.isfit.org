@@ -23,6 +23,11 @@ class SessionsController < ApplicationController
     email = params[:mail]
     user = ApplicantUser.where(mail: email).first
 
+    if user.nil?
+      flash.now[:notice] = "Vi fant ikke denne epostadressen, har du brukt en annen?"
+      render :forgotten_password and return
+    end
+
     password = user.set_password
 
     if user.save
