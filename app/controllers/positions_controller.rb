@@ -25,8 +25,9 @@ class PositionsController < ApplicationController
   end
 
   def edit
-   @applicant = Applicant.find(params[:id])
-   @positions_collection = positions_collected
+    @applicant_user = ApplicantUser.find(current_user)
+    @applicant      = @applicant_user.applicant
+    @positions_collection = positions_collected
   end
 
   def update
@@ -43,13 +44,14 @@ class PositionsController < ApplicationController
   end
 
   def lock
-    @applicant = Applicant.find(params[:id])
+    @applicant_user = ApplicantUser.find(current_user)
+    @applicant      = @applicant_user.applicant
     @applicant.lock
     @positions_collection = positions_collected
 
     flash[:notice] = "Søknaden er nå låst. Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost."
     #redirect_to action: :apply
-    redirect_to show_applicant_user_path(@applicant)
+    redirect_to show_applicant_user_path
   end
 
 
@@ -91,7 +93,7 @@ class PositionsController < ApplicationController
 
     if @applicant.locked
       flash[:notice] = "Denne søknaden er låst! Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost."
-      redirect_to show_applicant_user_path(@applicant)
+      redirect_to show_applicant_user_path
     end
     if current_user
       @applicant.applicant_user_id = current_user.id

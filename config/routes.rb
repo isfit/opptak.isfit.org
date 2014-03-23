@@ -5,8 +5,10 @@ OpptakIsfitOrg::Application.routes.draw do
   get 'section/:id'  => "positions#section", as: "section"
   get 'group/:id'  => "positions#group", as: "positions_group"
 
+  get '/positions/edit', to: 'positions#edit', as: :edit_position
+  post '/positions/lock', to: 'positions#lock', as: :lock_position
 
-  resources :positions do
+  resources :positions, only: [:index, :show, :update, :save] do
     collection do
       get :apply
       post :validate
@@ -14,7 +16,6 @@ OpptakIsfitOrg::Application.routes.draw do
     end
   end 
 
-  post "/positions/:id/lock", to: "positions#lock", as: :lock_position
   get "it-utvikler", to: "positions#show", defaults: { id: 513 }
 
   get "/applicant_user", to: "applicant_users#show", as: :show_applicant_user
