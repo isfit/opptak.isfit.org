@@ -100,14 +100,11 @@ html5boilerplate
                   <%= link_to t("position.your_application"), applicant_user_path(current_user.id)%>
                 </li>
               <% end %>
-                <li class="nav-link dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language 
-                  <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="?locale=no">Norsk</a></li>
-                    <li><a href="?locale=en">English</a></li>
-                  </ul>
-                </li>
+              <% if language_norwegian? %>
+                <li class="nav-link"><a href="?locale=en">English</a></li>
+              <% else %>
+                <li class="nav-link"><a href="?locale=no">Norsk</a></li>
+              <% end %>
             </ul>
           <% if current_user.nil? %>
             <%= link_to "Nytt passord", forgotten_password_path, class: "btn btn-primary navbar-btn navbar-right" %>
