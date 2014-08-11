@@ -1,6 +1,6 @@
 OpptakIsfitOrg::Application.routes.draw do
   resources :applicant_users, except: [ :new]
-  root to: "positions#index"
+  root to: "frontpage#index"
   
   get 'section/:id'  => "positions#section", as: "section"
   get 'group/:id'  => "positions#group", as: "positions_group"
