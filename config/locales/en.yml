@@ -140,6 +140,8 @@ en:
     background: "Relevant background"
     hear_about: "How did you hear about ISFiT?"
     motivational: Trade Your Ideas
+    your_application: "Your application"
+    section_desc: "Section Description"
   person:
     first_name: "Given name"
     last_name: "Family name"

@@ -7,7 +7,15 @@ class ApplicationController < ActionController::Base
   #before_action :get_section
 
   def set_locale
-      I18n.locale = :no
+    unless session[:locale]
+      I18n.locale = 'no'
+      session[:locale] = 'no'
+    end
+    I18n.locale = session[:locale]
+    if params[:locale] =~/en|no/
+      I18n.locale = params[:locale]
+      session[:locale] = params[:locale]
+    end
   end
   def get_section
     positions = Position.published.includes(:groups).order("groups.section_id, groups.id, positions.title_no")

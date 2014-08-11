@@ -166,6 +166,8 @@
     personal_info: Personlig informasjon
     application: Søkerinformasjon
     firstname: Fornavn
+    your_application: 'Din søknad'
+    section_desc: "Beskrivelse av seksjon"
   person:
     first_name: "Fornavn"
     last_name: "Etternavn"
