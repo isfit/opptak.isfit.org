@@ -91,6 +91,7 @@ html5boilerplate
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+                <li class="nav-link"><%= link_to "Søk", root_path %></li>
                 <li class="nav-link"><%= link_to "Stillinger", positions_path %></li>
               <% if current_user.nil? %>
                 <li class="nav-link">
