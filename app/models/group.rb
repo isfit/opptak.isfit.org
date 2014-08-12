@@ -6,7 +6,7 @@ class Group < ActiveRecord::Base
   def description
 	  desc = I18n.locale.to_s.eql?("no") ? self.description_no : self.description_en
     if desc.nil?
-      'Ingen beskrivelse'
+      I18n.t('no_description')
     else
       desc
     end
