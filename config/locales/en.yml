@@ -2,6 +2,7 @@ en:
   footer:
     editor: "Editor in Chief"
     copyright: All written material and the ISFiT logo is copyrighted the ISFiT Foundation © 2013.
+  no_description: "No description"
   tabs:
     mailing_lists: 'Mailing list'
     articles:
@@ -147,6 +148,8 @@ en:
     last_name: "Family name"
     address: "Address"
     phone: "Phone number"
+    birthyear: "Birthyear"
+    place_of_study: "Place of study"
     phone_nor: "Phone number"
     email: "Email address"
     email_ntnu: "Email address (at place of study)"
@@ -207,9 +210,9 @@ en:
         position_id_1: 'First choice (required)'
         position_id_2: 'Second choice (optional)'
         position_id_3: 'Third choice (optional)'
-        information: 'About you'
-        background: 'Relevant background'
-        hear_about: 'How did you hear about ISFiT?'
+        information: 'Can you tell us a little bit about yourself?'
+        background: 'Have you had previous experiences volunteering?'
+        heardof: 'What is your motivation for applying to ISFiT?'
       donation:
         name: "Name"
         email: "E-mail"

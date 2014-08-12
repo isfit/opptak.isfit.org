@@ -2,6 +2,7 @@
   footer:
     editor: "Redaktør"
     copyright: Alt av skriftlig materiale og ISFiT-logoen er kopibeskyttet Stiftelsen ISFiT.
+  no_description: "Ingen beskrivelse"
   tabs:
     mailing_lists: 'Maillister'
     articles:
