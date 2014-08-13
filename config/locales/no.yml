@@ -2,6 +2,7 @@
   footer:
     editor: "Redaktør"
     copyright: Alt av skriftlig materiale og ISFiT-logoen er kopibeskyttet Stiftelsen ISFiT.
+  no_description: "Ingen beskrivelse"
   tabs:
     mailing_lists: 'Maillister'
     articles:
@@ -166,6 +167,8 @@
     personal_info: Personlig informasjon
     application: Søkerinformasjon
     firstname: Fornavn
+    your_application: 'Din søknad'
+    section_desc: "Beskrivelse av seksjon"
   person:
     first_name: "Fornavn"
     last_name: "Etternavn"

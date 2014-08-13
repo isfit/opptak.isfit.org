@@ -128,6 +128,7 @@ class PositionsController < ApplicationController
         format.html { redirect_to show_applicant_user_path }
       else
         flash[:notice] = nil
+        @applicant_user.destroy
         @positions = Position.published
         format.html { render :action => :apply }
       end
