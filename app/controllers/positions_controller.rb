@@ -9,9 +9,8 @@ class PositionsController < ApplicationController
       .includes(:sections)
       .order("sections.name_no, groups.name_no, positions.title_no")
     
-    #@positions = Position.published.includes(:groups).order("groups.section_id, groups.id, positions.title_no")
-    #@positions = Position.all_ordered_by_section_name_position_name
-    @research_group = Group.find(159)
+    @positions.reject! { |p| p.description_en.blank? } if I18n.locale.eql? :en
+
     @communication = Section.find(22)
   end
  
