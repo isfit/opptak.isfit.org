@@ -1,7 +1,0 @@
-<h2 class="section_name"><%= @research_group.name %>
-<hr>
-<ul class="list-unstyled">
-  <% @research_group.positions.published.each do |p| %>
-    <li><h4><%= link_to p.title, position_path(p.id) %><h4></li>
-  <% end %>
-</ul>
