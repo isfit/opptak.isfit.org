@@ -3,6 +3,11 @@
     editor: "Redaktør"
     copyright: Alt av skriftlig materiale og ISFiT-logoen er kopibeskyttet Stiftelsen ISFiT.
   no_description: "Ingen beskrivelse"
+  layouts:
+    login: 'Logg inn'
+    newpassword: 'Nytt passord'
+    email: "Epost"
+    password: 'Passord'
   tabs:
     mailing_lists: 'Maillister'
     articles:
@@ -122,9 +127,6 @@
       release: 
         header: 'Programslipp'
         subtitle: 'Les mer her!'
-      elise:
-        header: 'Sug kuk'
-        subtitle: 'og dø'
     photo_contest:
       title: 'Vinneren av fotokonkurransen:'
       theme: 'vennskap'
