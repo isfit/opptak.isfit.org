@@ -136,6 +136,7 @@ en:
     form: "Application form"
     to_positions: "Positions"
     fill_in: "Fill out all the fields to apply."
+    submit: 'Submit'
     first_choice: "First choice"
     second_choice: "Second choice"
     third_choice: "Third choice"
