@@ -148,8 +148,11 @@
     back_button_groups: "Tilbake til gjeng"
     motivational: "Skap ISFiT"
     positions: "Stillinger"
+    apply_position: "Søk på denne stillingen"
     apply: "Søk nå"
     form: "Søk nå!"
+    to_positions: "Til stillingsbeskrivelser"
+    login: 'Logg inn'
     fill_in: |
       Søknaden er for at vi skal bli litt kjent med deg.
       Alle søkere vil bli innkalt til intervju og intervjuet
