@@ -5,7 +5,15 @@
         <%# link_to t("position.form"), new_applicant_user_path, class: "btn btn-primary btn-large"%>
       </div>
       <% if I18n.locale.to_s.eql?('no') %>
-      <div class="lead"><%= raw format("<blockquote><p>Da jeg søkte vervet i ISFiT visste jeg knapt hvilken stilling jeg ville ha, men jeg visste at dette var et studentinitiativ jeg bare måtte være med på! Med andre ord var forventningene ganske skyhøye til et eventyrår uten like. Da er det ganske morsomt å kunne konstatere i ettertid at ISFiT var alt jeg håpte på og så mye, MYE mer.</p><small>Synne Mari Pedersen, Redaksjonen ISFiT 2013</small></blockquote><p>Er du engasjert og ønsker å gjøre noe mer ut av studietiden? Ønsker du en unik organisasjonserfaring? Vil du utfordre deg selv og få venner for livet? Søk ISFiT 2015!</p><p>ISFiT er verdens største internasjonale studentfestival og arrangeres annethvert år av frivillige Trondheimsstudenter. Under ISFiT samles studenter fra hele verden til 11 dager med ideutveksling, dialog, debatt og et variert kulturprogram. Om du vil være med på å skape noe stort sammen med over 400 andre frivillige har du muligheten nå.</p><p>I ISFiT vil du bli en del av en unik gruppe engasjerte studenter, og du vil få verdifull erfaring med planlegging og gjennomføring av prosjekter. Du vil sitte i en av festivalens seks seksjoner, og du blir medlem av en egen gjeng. Vi ser etter deg som er klar for en utfordring, og som vil være med på å gjøre ISFiT 2015 til den beste ISFiT-festivalen noen gang. Søknadsfrist er 24.mars 23:59.</p><p>Klikk deg inn på #{ link_to "stillingsbeskrivelsene", positions_path } og finn ut hva som kan passe akkurat deg. Oversikt over hva de ulike seksjonene i ISFiT gjør finner du til høyre. Ved å klikke på de ulike gjengene under hver seksjon kommer du til stillingsbeskrivelsene. Her har vi også sitater fra tidligere gjengmedlemmer, for at du skal få et spennende skråblikk inn i hverdagen i ISFiT.</p><p>Nøl ikke med å ta kontakt med oss – vi har veldig lyst til å snakke med deg!</p><p>Skap ISFiT!</p>Med vennlig hilsen<br>Marius Jones - President, ISFiT 2015") %></div>
+      <div class="lead"><%= raw format("<blockquote><p>Da jeg søkte vervet i ISFiT visste jeg knapt hvilken stilling jeg ville ha, men jeg visste at dette var et studentinitiativ jeg bare måtte være med på!
+       Med andre ord var forventningene ganske skyhøye til et eventyrår uten like. Da er det ganske morsomt å kunne konstatere i ettertid at ISFiT var alt jeg håpte på og så mye, MYE mer.</p><small>Synne Mari Pedersen, Redaksjonen ISFiT 2013</small></blockquote><p>
+       Er du engasjert og ønsker å gjøre noe mer ut av studietiden? Ønsker du en unik organisasjonserfaring? Vil du utfordre deg selv og få venner for livet? Søk ISFiT 2015!</p>
+       <p>ISFiT er verdens største internasjonale studentfestival og arrangeres annethvert år av frivillige Trondheimsstudenter. Under ISFiT samles studenter fra hele verden til 11 dager med ideutveksling, dialog, debatt og et variert kulturprogram. 
+       Om du vil være med på å skape noe stort sammen med over 400 andre frivillige har du muligheten nå.</p>
+       <p>I ISFiT vil du bli en del av en unik gruppe engasjerte studenter, og du vil få verdifull erfaring med planlegging og gjennomføring av prosjekter. 
+       Du vil sitte i en av festivalens seks seksjoner, og du blir medlem av en egen gjeng. Vi ser etter deg som er klar for en utfordring, og som vil være med på å gjøre ISFiT 2015 til den beste ISFiT-festivalen noen gang. Søknadsfrist er 31.august 23:59.</p><p>Klikk deg inn på #{ link_to "stillingsbeskrivelsene", positions_path } og finn ut hva som kan passe akkurat deg. 
+       Oversikt over hva de ulike seksjonene i ISFiT gjør finner du til høyre. Ved å klikke på de ulike gjengene under hver seksjon kommer du til stillingsbeskrivelsene. Her har vi også sitater fra tidligere gjengmedlemmer, for at du skal få et spennende skråblikk inn i hverdagen i ISFiT.</p>
+       <p>Nøl ikke med å ta kontakt med oss – vi har veldig lyst til å snakke med deg!</p><p>Skap ISFiT!</p>Med vennlig hilsen<br>Marius Jones - President, ISFiT 2015") %></div>
     <% else %>
       <div class="lead"><%= raw format("As a volunteer at ISFiT, you will contribute to make the world's largest international student festival a true success. We promise that you will make new friendships, meet other dedicated students and have a lot of fun!") %></div>
       <div class="lead"><p>
@@ -27,8 +35,9 @@
 
 <div class="row">
   <center>
-  <button type="button " class="btn btn-lg btn-default"><%=link_to "Til stillingsbeskrivelsene", positions_path %></button>
+  <button type="button " class="btn btn-lg btn-default"><%=link_to t("position.to_positions"), positions_path %></button>
   </center>
 </div>
+
 
 </div>

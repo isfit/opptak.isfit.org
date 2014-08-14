@@ -148,6 +148,7 @@
     positions: "Stillinger"
     apply: "Søk nå"
     form: "Søk nå!"
+    to_positions: "Til stillingsbeskrivelser"
     login: 'Logg inn'
     fill_in: |
       Søknaden er for at vi skal bli litt kjent med deg.
