@@ -3,6 +3,11 @@ en:
     editor: "Editor in Chief"
     copyright: All written material and the ISFiT logo is copyrighted the ISFiT Foundation © 2013.
   no_description: "No description"
+  layouts:
+    login: 'Login'
+    newpassword: 'New password'
+    email: "Email"
+    password: 'Password'
   tabs:
     mailing_lists: 'Mailing list'
     articles:
