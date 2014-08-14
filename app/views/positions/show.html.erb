@@ -2,7 +2,7 @@
 	<div class="pull-right">
 
 		<% if current_user.nil? || current_user.application_any? %>
-			<%= link_to "Søk på denne stillingen", { controller: :positions, action: :apply, referral_position: @position.id }, class: "btn btn-primary" %>
+			<%= link_to t('position.apply_position'), { controller: :positions, action: :apply, referral_position: @position.id }, class: "btn btn-primary" %>
 		<% end %>
 		<% if @position.group.section_id.eql?(22) %>
 			<%= link_to t('position.back_button_sections'), section_path(@position.group.section_id), :class => "btn btn-info" if !@position.group.section_id.nil? %>
