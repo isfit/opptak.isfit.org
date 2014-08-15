@@ -33,9 +33,9 @@ class PositionsController < ApplicationController
     @applicant = Applicant.find(current_user.applicant.id)
     respond_to do |format|
       if @applicant.locked
-        format.html { redirect_to show_applicant_user_path, notice: "Denne søknaden er låst! Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost." }
+        format.html { redirect_to show_applicant_user_path, notice: I18n.t("application.lockedapplication") }
       elsif @applicant.update_attributes(user_params)
-        format.html { redirect_to show_applicant_user_path, notice: 'Søknad oppdatert.' }
+        format.html { redirect_to show_applicant_user_path, notice: I18n.t('application.updatesuccessfull') }
       else
         format.html { render action: "edit" }
       end
@@ -48,7 +48,7 @@ class PositionsController < ApplicationController
     @applicant.lock
     @positions_collection = positions_collected
 
-    flash[:notice] = "Søknaden er nå låst. Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost."
+    flash[:notice] = I18n.t("application.lockedapplication")
     #redirect_to action: :apply
     redirect_to show_applicant_user_path
   end
@@ -77,7 +77,7 @@ class PositionsController < ApplicationController
         format.html { render :template => "positions/apply" }
       end
     else
-      flash[:notice] = "Du har allerede registrert en søknad. Hvis ikke kontakt orakel@isfit.org på epost."
+      flash[:notice] = I18n.t("application.alreadyregistered")
       redirect_to root_path
     end
 
@@ -91,7 +91,7 @@ class PositionsController < ApplicationController
     new_user = false
 
     if @applicant.locked
-      flash[:notice] = "Denne søknaden er låst! Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost."
+      flash[:notice] = I18n.t("application.lockedapplication")
       redirect_to show_applicant_user_path
     end
     if current_user
@@ -103,7 +103,7 @@ class PositionsController < ApplicationController
       if @applicant_user.save
         @applicant.applicant_user_id = @applicant_user.id
       else
-        flash[:notice] = "Noe gikk galt. Har du allerede registrert med denne epostadressen? Hvis ikke kontakt orakel@isfit.org på epost."
+        flash[:notice] = I18n.t("application.somethingwrong")
         #redirect_to action: :apply
         render action: :apply
         return
@@ -117,7 +117,7 @@ class PositionsController < ApplicationController
         else
           Postoffice.applicant_add(@applicant.full_name, @applicant.mail).deliver
         end
-        flash[:notice] = "Din søknad ble sendt."
+        flash[:notice] = I18n.t("application.sentapplication")
         @positions = Position.published
 
         if current_user.nil?

@@ -1,4 +1,10 @@
 "no":
+  application:
+    updatesuccessfull: "Søknaden din har blitt oppdatert!"
+    lockedapplication: 'Denne søknaden er låst! Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost.'
+    alreadyregistererd: 'Du har allerede registrert en søknad. Hvis ikke kontakt orakel@isfit.org på epost.'
+    somethingwrong: 'Noe gikk galt. Har du allerede registrert med denne epostadressen? Hvis ikke kontakt orakel@isfit.org på epost.'
+    sentapplication: 'Din søknad ble sendt.'
   footer:
     editor: "Redaktør"
     copyright: Alt av skriftlig materiale og ISFiT-logoen er kopibeskyttet Stiftelsen ISFiT.
@@ -7,7 +13,7 @@
     login: 'Logg inn'
     newpassword: 'Nytt passord'
     email: "Epost"
-    password: 'Passord'
+    password: 'PassordN'
   tabs:
     mailing_lists: 'Maillister'
     articles:
@@ -194,6 +200,8 @@
   calender:
     today: I dag
     tomorrow: I morgen
+  session:
+    logout: 'Du har blitt logget ut.'
   simple_form:
     labels:
       applicant:

@@ -1,4 +1,10 @@
-en:
+en: 
+  application:
+    updatesuccessfull: "Your application has been updated!"
+    lockedapplication: 'This application is locked! If you want to unlock it, please contact orkel@isfit.org.'
+    alreadyregistered: 'You have already registered an application. If this is not the case, please contact orakel@isfit.org.'
+    somethingwrong: 'Something went wrong. Have you already registered with this email? If not, please contact orakel@isfit.org.'
+    sentapplication: 'Your application is sent.'
   footer:
     editor: "Editor in Chief"
     copyright: All written material and the ISFiT logo is copyrighted the ISFiT Foundation © 2013.
@@ -173,6 +179,7 @@ en:
   calender:
     today: Today
     tomorrow: Tomorrow
+
   helpers:
     label:
       project_support:
@@ -209,6 +216,8 @@ en:
         member_name: Name of member (only if the option 'member of ISFiT' is chosen)
         why: Why do you want to volunteer?
         base: ""
+  session:
+    logout: 'You have been logged out'        
   simple_form:
     labels:
       applicant:
