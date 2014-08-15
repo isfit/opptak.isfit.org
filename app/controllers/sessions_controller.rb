@@ -41,6 +41,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: "Du har blitt logget ut."
+    redirect_to root_url, notice: I18n.t("session.logout")
   end
 end
