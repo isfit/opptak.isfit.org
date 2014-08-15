@@ -158,6 +158,28 @@ en:
     motivational: Trade Your Ideas
     your_application: "Your application"
     section_desc: "Section Description"
+  application:
+    read_application: "Read application"
+    lock_application: "Lock application"
+    edit_application: "Edit application"
+    write_application: "Write application"
+    logout: "Log out"
+    lock: "Lock application"
+    locked_application: "This application is locked. If you want to reopen it, please contact orakel@isfit.org"
+    change_application: "On this page you can read, edit and lock your application."
+    lock_desc: |
+      By locking your application you can not do any more changes to the application. 
+      If you choose to lock your application we can schedule your interview before the deadline.
+    lock_please: |
+      We encourage you to lock your application if you are satisfied with your entry.
+    name: "Name:"
+    birthyear: "Birthyear:"
+    university: "University:"
+    first: "First choice:"
+    second: "Second choice:"
+    third: "Third choice:"
+    email_ntnu: "Email address (at place of study):"
+    phone: "Phone number:"
   person:
     first_name: "Given name"
     last_name: "Family name"

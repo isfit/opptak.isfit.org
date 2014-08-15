@@ -179,6 +179,28 @@
     firstname: Fornavn
     your_application: 'Din søknad'
     section_desc: "Beskrivelse av seksjon"
+  application:
+    read_application: "Les søknad"
+    lock_application: "Lås søknad"
+    edit_application: "Rediger søknad"
+    write_application: "Skriv søknad"
+    logout: "Logg ut"
+    lock: "Låse søknad"
+    locked_application: "Denne søknaden er låst. Hvis du vil åpne søknaden igjen kan du kontakte orakel@isfit.org"
+    change_application: "Her kan du lese, endre og låse din søknad."
+    lock_desc: |
+      Å låse søknaden vil si at du ikke kan gjøre flere forandringer i søketeksten eller valg av stillinger. 
+      Vi kan da planlegge intervju med deg før fristen har gått ut.
+    lock_please: |
+      Hvis du er fornøyd med søknaden din allerede, så oppfordrer vi til å låse den.
+    name: "Navn:"
+    birthyear: "Fødselsår:"
+    university: "Universitet/høyskole:"
+    first: "Førstevalg:"
+    second: "Andrevalg:"
+    third: "Tredjevalg:"
+    email_ntnu: "E-postadresse (ved studiested):"
+    phone: "Telefonnummer:"
   person:
     first_name: "Fornavn"
     last_name: "Etternavn"
