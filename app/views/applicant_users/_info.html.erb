@@ -1,40 +1,40 @@
 <% if @applicant.locked %>
-<p>Denne søknaden er låst. Hvis du vil åpne søknaden igjen kan du kontakte orakel@isfit.org</p>
+<p><%= t("application.locked_application")%></p>
 <% else %>
-<p>Her kan du lese, endre og låse din søknad.</p>
-<h3>Låse søknad</h3>
-<p>Å låse søknaden vil si at du ikke kan gjøre flere forandringer i søketeksten eller valg av stillinger. Vi kan da planlegge intervju med deg før fristen har gått ut.</p>
-<p>Hvis du er fornøyd med søknaden din allerede, så oppfordrer vi til å låse den.</p>
+<p><%= t("application.change_application")%></p>
+<h3><%= t("application.lock")%></h3>
+<p><%= t("application.lock_desc")%></p>
+<p><%= t("application.lock_please")%></p>
 <% end %>
-<h3>Din søknad</h3>
-<b>Navn:</b>
+<h3><%= t("position.your_application")%></h3>
+<b><%= t("application.name")%></b>
 <p><%= @applicant.full_name %></p>
-<b>Fødselsår:</b>
+<b><%= t("application.birthyear")%></b>
 <p><%= @applicant.birthyear %></p>
-<b>Universitet/høyskole:</b>
+<b><%= t("application.university")%></b>
 <p><%= @applicant.place_of_study %></p>
-<b>E-postadresse (ved studiested)</b>
+<b><%= t("application.email_ntnu")%></b>
 <p><%= @applicant.mail %></p>
-<b>Telefonnummer</b>
+<b><%= t("application.phone")%></b>
 <p><%= @applicant.phone %></p>
 
-<h3>Stillinger</h3>
-<b>Førstevalg:</b>
+<h3><%= t("position.positions")%></h3>
+<b><%= t("application.first")%></b>
 <p><%= Position.find(@applicant.position_id_1).title %></p>
 
 <% if @applicant.position_id_2 %>
-<b>Andrevalg:</b>
+<b><%= t("application.second")%></b>
 <p><%= Position.find(@applicant.position_id_2).title %></p>
 <% end %>
 
 <% if @applicant.position_id_3 %>
-<b>Tredjevalg:</b>
+<b><%= t("application.third")%></b>
 <p><%= Position.find(@applicant.position_id_3).title %></p>
 <% end %>
 
-<b>Kan du fortelle litt om deg selv?</b>
+<b><%= t("position.about_you")%></b>
 <p><%= simple_format @applicant.information %></p>
-<b>Har du tidligere hatt frivillige verv?</b>
+<b><%= t("position.background")%></b>
 <p><%= simple_format @applicant.background %></p>
-<b>Hva er din motivasjon for å søke ISFiT-styret?</b>
+<b><%= t("simple_form.labels.applicant.heardof")%></b>
 <p><%= simple_format @applicant.heardof %></p>
