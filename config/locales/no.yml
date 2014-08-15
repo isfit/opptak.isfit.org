@@ -13,7 +13,7 @@
     login: 'Logg inn'
     newpassword: 'Nytt passord'
     email: "Epost"
-    password: 'PassordN'
+    password: 'Passord'
   tabs:
     mailing_lists: 'Maillister'
     articles:
