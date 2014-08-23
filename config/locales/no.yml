@@ -1,10 +1,4 @@
 "no":
-  application:
-    updatesuccessfull: "Søknaden din har blitt oppdatert!"
-    lockedapplication: 'Denne søknaden er låst! Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost.'
-    alreadyregistererd: 'Du har allerede registrert en søknad. Hvis ikke kontakt orakel@isfit.org på epost.'
-    somethingwrong: 'Noe gikk galt. Har du allerede registrert med denne epostadressen? Hvis ikke kontakt orakel@isfit.org på epost.'
-    sentapplication: 'Din søknad ble sendt.'
   footer:
     editor: "Redaktør"
     copyright: Alt av skriftlig materiale og ISFiT-logoen er kopibeskyttet Stiftelsen ISFiT.
@@ -180,6 +174,11 @@
     your_application: 'Din søknad'
     section_desc: "Beskrivelse av seksjon"
   application:
+    updatesuccessfull: "Søknaden din har blitt oppdatert!"
+    lockedapplication: 'Denne søknaden er låst! Hvis du vil låse den opp igjen kontakt orakel@isfit.org på epost.'
+    alreadyregistererd: 'Du har allerede registrert en søknad. Hvis ikke kontakt orakel@isfit.org på epost.'
+    somethingwrong: 'Noe gikk galt. Har du allerede registrert med denne epostadressen? Hvis ikke kontakt orakel@isfit.org på epost.'
+    sentapplication: 'Din søknad ble sendt.'
     read_application: "Les søknad"
     lock_application: "Lås søknad"
     edit_application: "Rediger søknad"
