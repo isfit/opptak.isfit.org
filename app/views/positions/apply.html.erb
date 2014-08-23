@@ -9,6 +9,7 @@
     <%#end%>
     <h2><%= t("position.form")%></h2>
     <%= render 'partials/error', :locals=> {:model => @applicant} %>
+    <%= render 'partials/error', :locals=> {:model => @applicant_user} if @applicant_user %>
 
     <p><%= raw t("position.fill_in") %></p>
 
