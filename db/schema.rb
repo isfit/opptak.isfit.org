@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140313195526) do
+ActiveRecord::Schema.define(version: 20140908170422) do
 
   create_table "applicant_users", force: true do |t|
     t.string   "mail"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140313195526) do
     t.integer  "position_id_1"
     t.integer  "position_id_2"
     t.integer  "position_id_3"
-    t.integer  "status",             default: 0
+    t.integer  "status",                default: 0
     t.text     "comment"
     t.string   "interview_place_1"
     t.string   "interview_place_2"
@@ -45,18 +45,19 @@ ActiveRecord::Schema.define(version: 20140313195526) do
     t.integer  "interviewer_id_2_2"
     t.integer  "interviewer_id_3_1"
     t.integer  "interviewer_id_3_2"
-    t.boolean  "deleted",            default: false
+    t.boolean  "deleted",               default: false
     t.string   "username"
     t.string   "password"
     t.string   "dn"
-    t.boolean  "has_account",        default: false
-    t.integer  "is_notified",        default: 0
+    t.boolean  "has_account",           default: false
+    t.integer  "is_notified",           default: 0
     t.string   "birthyear"
     t.string   "place_of_study"
     t.integer  "applicant_user_id"
     t.boolean  "locked"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "recruited_position_id"
   end
 
   create_table "festivals", id: false, force: true do |t|
