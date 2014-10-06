@@ -79,7 +79,8 @@ p a:hover {
 }
 
 a {
-  color: rgb(216,52,21);
+  color: #EFAB44;
+  font-weight: bold;  
   -webkit-transition: background .2s, color .2s;
   -o-transition: background .2s, color .2s;
   -moz-transition: background .2s, color .2s;
@@ -89,6 +90,24 @@ a {
 
 .navbar {
 //  border-top: 3px solid rgb(65,192,240);
+    background: #0099CC;
+}
+.btn-custom{
+  background: #EFAB44;
+  color: #FFFFFF;
+}
+.btn-login{
+  margin-left: 13px;
+}
+.btn-custom:hover {
+  background: #FFF;
+  color: #EFAB44 ;
+}
+.btn-new-password{
+  margin-top: 2px;
+}
+.footer-logo{
+  margin-bottom: 30px;
 }
 
 #tabs > ul {
@@ -116,9 +135,12 @@ a.brand,li.inactive a {
 a.brand {
   margin-top: 3px;
 }
+.navbar-default .navbar-nav > li > a {
+  color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+    color: #EFAB44 !important;
 
-.nav .active > a, .navbar .nav .active > a:hover {
-  background-color: rgb(34,54,102) !important;
 }
 
 li.inactive a:hover {
@@ -553,7 +575,7 @@ div.event-button.round.disabled {
 .content-wrapper {
   height: 100%;
   z-index: 1;
-  background: rgb(34,54,102);
+  background: #fff;
   position: relative;
   top: 0;
   left: 0;
@@ -570,7 +592,7 @@ div.event-button.round.disabled {
 }
 
 body {
-  background: url(https://i.imgur.com/mU7FI.png);
+  background: #0099CC;
   padding-bottom: 150px;
   padding-top: 0;
 }
