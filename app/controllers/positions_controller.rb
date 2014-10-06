@@ -68,17 +68,22 @@ class PositionsController < ApplicationController
   end
 
   def apply
-    if current_user.nil? || current_user.application_any?
-      @applicant = Applicant.new
-      @positions_collected = positions_collected
-      @referral_position = params[:referral_position]
-
-      respond_to do |format|
-        format.html { render :template => "positions/apply" }
-      end
+    if I18n.locale.to_s.eql?('en')
+        flash[:notice] = "Sorry, ISFiT does not have any positions for english speaking students at the moment."
+        redirect_to root_path
     else
-      flash[:notice] = I18n.t("application.alreadyregistered")
-      redirect_to root_path
+      if current_user.nil? || current_user.application_any?
+        @applicant = Applicant.new
+        @positions_collected = positions_collected
+        @referral_position = params[:referral_position]
+
+        respond_to do |format|
+          format.html { render :template => "positions/apply" }
+        end
+      else
+        flash[:notice] = I18n.t("application.alreadyregistered")
+        redirect_to root_path
+      end
     end
 
   end
@@ -149,7 +154,17 @@ def user_params
 end
 
 def positions_collected
-  @positions = Position.published.includes(:groups).order("groups.section_id, groups.id,positions.title_no")
-  @positions_collection = []
-  @positions.each { |p| @positions_collection << ["#{p.groups.first.name} - #{p.title}", p.id]} 
+  if I18n.locale.to_s.eql?('no')
+    @positions = Position.published.includes(:groups).order("groups.section_id, groups.id,positions.title_no")
+    @positions_collection = []
+    @positions.each { |p| @positions_collection << ["#{p.groups.first.name} - #{p.title}", p.id]}
+  else
+    @positions = Position.published.includes(:groups).order("groups.section_id, groups.id,positions.title_en")
+    @positions_collection = []
+    @positions.each do |p|
+      if !p.description_en.blank? 
+        @positions_collection << ["#{p.groups.first.name} - #{p.title}", p.id] 
+      end
+    end
+  end
 end
