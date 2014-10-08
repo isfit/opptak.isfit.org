@@ -17,12 +17,21 @@
       :placeholder => t('person.last_name')
     } %>
     </div>
-    <div class="form-group">
-    <%= f.input :birthyear, :input_html => {
-      :class => 'span5 form-control',
-      :placeholder => t('person.birthyear')
-    } %>
-    </div>
+    <% if selected_first_position %>
+      <div class="form-group">
+        <%@birthday_years = birthday_years? %>
+        <%= f.input :birthyear, :collection => @birthday_years, selected: @applicant.birthyear, :input_html => {
+          :class => 'span7 form-control'
+        } %>
+      </div>
+    <% else %>
+      <div class="form-group">
+        <%@birthday_years = birthday_years? %>
+        <%= f.input :birthyear, :collection => @birthday_years, :input_html => {
+          :class => 'span7 form-control'
+        } %>
+      </div>
+    <% end %>
     <div class="form-group">
     <%= f.input :place_of_study, :input_html => {
       :class => 'span5 form-control',
@@ -51,25 +60,25 @@
     <% if selected_first_position %>
     <div class="form-group">
       <%= f.input :position_id_1, :collection => @positions_collection, selected: selected_first_position, :input_html => {
-        :class => 'span7'
+        :class => 'span7 form-control'
       } %>
     </div>
     <% else %>
     <div class="form-group">
       <%= f.input :position_id_1, :collection => @positions_collection, :input_html => {
-        :class => 'span7'
+        :class => 'span7 form-control'
       } %>
     </div>
     <% end %>
     <div class="form-group">
     <%= f.input :position_id_2, :collection => @positions_collection, :input_html => {
-      :class => 'span7'
+      :class => 'span7 form-control'
     } %>
     </div>
 
     <div class="form-group">
     <%= f.input :position_id_3, :collection => @positions_collection, :input_html => {
-      :class => 'span7'
+      :class => 'span7 form-control'
     } %>
     </div>
 </div>
