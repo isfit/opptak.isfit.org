@@ -24,7 +24,6 @@
     <% active_section = nil %>
     <% communication_rendered = false %>
     <% for position in @positions %>
-      <% binding.pry if position.group.nil? %>
       <% if not position.group == active_group %>
         <% if not active_group.nil? %>
         </ul>

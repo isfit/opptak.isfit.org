@@ -179,6 +179,8 @@ en:
     third: "Third choice:"
     email_ntnu: "Email address (at place of study):"
     phone: "Phone number:"
+    repeat_mail: "Repeat your email adress"
+    email_error: "The two email adresses you have given us do not match, try again."  
   person:
     first_name: "Given name"
     last_name: "Family name"

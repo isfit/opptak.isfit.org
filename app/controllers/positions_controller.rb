@@ -94,7 +94,7 @@ class PositionsController < ApplicationController
     @positions_collected = positions_collected
     @referral_position = params[:referral_position]
     new_user = false
-
+    
     if @applicant.locked
       flash[:notice] = I18n.t("application.lockedapplication")
       redirect_to show_applicant_user_path

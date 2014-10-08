@@ -146,7 +146,7 @@
     back_button_positions: "Tilbake til alle stillinger"
     back_button_sections: "Tilbake til seksjon"
     back_button_groups: "Tilbake til gjeng"
-    motivational: "Skap ISFiT"
+    motivational: "FORDI VERDEN ER STØRRE ENN TRONDHEIM"
     positions: "Stillinger"
     apply_position: "Søk på denne stillingen"
     apply: "Søk nå"
@@ -200,6 +200,8 @@
     third: "Tredjevalg:"
     email_ntnu: "E-postadresse (ved studiested):"
     phone: "Telefonnummer:"
+    repeat_mail: "Gjenta e-postadresse"
+    email_error: "De to e-postadressene du har gitt oss er ikke like, prøv igjen."
   person:
     first_name: "Fornavn"
     last_name: "Etternavn"
