@@ -1,8 +1,19 @@
 <h2 class="section_name"><%= link_to @communication.name_no, @communication %></h2>
 <hr style="height:3px;border:none;color:#D0D0D0;background-color:#D0D0D0;" />
 
+<% active_group = nil %>
 <ul class="list-unstyled">
 <% @communication.positions.published.order(:title_no).each do |position| %>
-	<li><h4><%=link_to position.title, position_path(position.id) %></h4></li>
+
+	<% if(position.group.name.eql?("Onlinefestival"))%>
+		<% if active_group.nil? %>
+			<li><h3><%= link_to position.group.name + " (Webutvikler og Prosjektmedarbeider)", positions_group_path(position.group.id) %> </h3></li>
+		<% end %>
+
+	<% elsif (!position.group.name.eql?("Onlinefestival"))  %>
+		<li><h4><%=link_to position.title, position_path(position.id) %></h4></li>
+	<% end %>
+	<% active_group = position.groups.first %>
+
 <% end %>
 </ul>
