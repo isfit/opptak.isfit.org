@@ -22,17 +22,11 @@
 
     <% active_group = nil %>
     <% active_section = nil %>
-    <% communication_rendered = false %>
     <% for position in @positions %>
       <% if not position.group == active_group %>
         <% if not active_group.nil? %>
         </ul>
         </ul>
-      <% end %>
-      <% if position.group.section.eql?(@communication) %>
-        <%= render 'communication' if !communication_rendered %>
-        <% communication_rendered = true %>
-        <% next %>
       <% end %>
       <% if position.group and position.group.section and not position.group.section == active_section %>
         <%if not active_section.nil?%>
