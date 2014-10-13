@@ -36,6 +36,9 @@ class ApplicationController < ActionController::Base
   helper_method :require_signin!
 
   def current_user
+    if(ApplicantUser.where(id: session[:user_id]).empty?)
+      session[:user_id] = nil
+    end
     @current_user ||= ApplicantUser.find(session[:user_id]) if session[:user_id]
   end
   helper_method :current_user
