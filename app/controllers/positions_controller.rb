@@ -68,10 +68,6 @@ class PositionsController < ApplicationController
   end
 
   def apply
-    if I18n.locale.to_s.eql?('en')
-        flash[:notice] = "Sorry, ISFiT does not have any positions for english speaking students at the moment."
-        redirect_to root_path
-    else
       if current_user.nil? || current_user.application_any?
         @applicant = Applicant.new
         @positions_collected = positions_collected
@@ -84,7 +80,7 @@ class PositionsController < ApplicationController
         flash[:notice] = I18n.t("application.alreadyregistered")
         redirect_to root_path
       end
-    end
+    
 
   end
   

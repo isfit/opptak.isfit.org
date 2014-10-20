@@ -21,18 +21,11 @@
         %>
       </div>
     <% else %>
-      <div class="lead"><%= raw format("Sorry, ISFiT does not have any positions for english speaking students at the moment.") %></div>
-      <div class="lead"><p>
-
-      </p></div>
-
-
-      <div class="lead"><p>
-        <strong></strong>
-      </p></div>
-
-      <div class="lead"><p>
-      </p></div>
+          <div class="lead"><%= raw format("
+      <p>Do you want to get the experience of a lifetime? Is there a small “hobby chef” or filmmaker living inside you? Do you want to contribute to the world’s biggest student festival? Expand you horizons and apply ISFiT! After all, the world is bigger than Trondheim!</p>
+        <p>The deadline for the application is 20.10.2014, 23:59.</p>") 
+        %>
+      </div>
     <% end %>
 
   </ul>
@@ -40,7 +33,6 @@
 
 <div class="row">
   <center>
-  <% if I18n.locale.to_s.eql?('no') %>
   <div class="col-md-12">
     <%=link_to t("position.to_positions"), positions_path, class: "btn btn-lg btn-default" %>
   </div>
@@ -51,7 +43,6 @@
   </div>
     <div class="col-md-2">
   </div>
-  <% end %>
   </center>
 </div>
 
