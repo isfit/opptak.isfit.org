@@ -1,0 +1,30 @@
+<%= simple_form_for (@parliament) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :email, placeholder: 'name@example.com' %>
+  <%= f.input :phone %>
+  <%= f.input :years_work_lost, collection: ['50', '55 000', '3'], as: :radio_buttons, label: 'Hvor mange Norske årsverk (et års arbeid for en person) tror du går tapt i Norge hvert år? ' %>
+  <%= f.input :place_of_study, collection: ['NTNU', 'HiST'], as: :radio_buttons %> 
+  <%= f.input :remember_date, collection: ['Ja!', 'Nei'], as: :radio_buttons, label: 'Kommer du til å huske datoen 13. februar?' %>
+  <%= f.input :why_attend, label: 'Hvorfor har du lyst til å delta på ISFiT Parliament?', hint: 'Skriv et avsnitt om hvorfor du interesserer deg for å bekjempe korrupsjon' %>
+  <%= f.button :submit, label: 'Send søknad' %>
+<% end %>
+
+<!--
+<%= form_for(@parliament) do |f| %>
+  <% if @parliament.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@parliament.errors.count, "error") %> prohibited this parliament from being saved:</h2>
+
+      <ul>
+      <% @parliament.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+-->

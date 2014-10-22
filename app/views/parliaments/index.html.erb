@@ -1,0 +1,31 @@
+<!--
+<h1>Listing parliaments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parliaments.each do |parliament| %>
+      <tr>
+        <td><%= link_to 'Show', parliament %></td>
+        <td><%= link_to 'Edit', edit_parliament_path(parliament) %></td>
+        <td><%= link_to 'Destroy', parliament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parliament', new_parliament_path %>
+-->
+<div>
+  <%= render 'form' %>
+
+</div>
