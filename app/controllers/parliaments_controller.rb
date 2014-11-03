@@ -29,7 +29,7 @@ class ParliamentsController < ApplicationController
 
     respond_to do |format|
       if @parliament.save
-        format.html { redirect_to @parliament, notice: 'Parliament was successfully created.' }
+        format.html { redirect_to @parliament, notice: 'Din søknad er nå sendt.' }
         format.json { render action: 'show', status: :created, location: @parliament }
       else
         format.html { render action: 'new' }
@@ -43,7 +43,7 @@ class ParliamentsController < ApplicationController
   def update
     respond_to do |format|
       if @parliament.update(parliament_params)
-        format.html { redirect_to @parliament, notice: 'Parliament was successfully updated.' }
+        format.html { redirect_to @parliament, notice: 'Din søknad ble oppdatert.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -70,6 +70,6 @@ class ParliamentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def parliament_params
-      params[:parliament]
+      params.require(:parliament).permit(:name, :email, :years_work_lost, :place_of_study, :remember_date, :why_attend, :created_at, :updated_at, :why_ip_relevant, :what_study, :how_hear_about_day, :how_corrupt, :had_cimilar_experience, :how_corrupt_tgi)
     end
 end
