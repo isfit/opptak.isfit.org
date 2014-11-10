@@ -25,14 +25,16 @@ p.help-block {
 	padding-top: 7px;
 	margin-top: 7px;
 	margin-bottom: 5px;
+	font-family: verdana,arial,helvetica,sans-serif;
 
 }
 .test {
 	margin-top: 0px;
 	margin-bottom: 7px;	
+
 }
 .my_button {
-	
+	background: #EFAB44;	
 }
 .hint_hint_1 {
 	padding-top: 7px;
@@ -42,4 +44,10 @@ p.help-block {
 }
 label.had_cimilar_experience_ja{
 	font-weight: normal;
+}
+.label_hint_for_default_form {
+	padding-top: 7px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: verdana,arial,helvetica,sans-serif;
 }

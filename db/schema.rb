@@ -82,16 +82,15 @@ ActiveRecord::Schema.define(version: 20141029182043) do
     t.integer "position_id"
   end
 
-  create_table "parliaments", id: false, force: true do |t|
-    t.integer  "id",                     default: 0, null: false
+  create_table "parliaments", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.integer  "years_work_lost"
     t.string   "place_of_study"
     t.string   "remember_date"
     t.string   "why_attend"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "why_ip_relevant"
     t.string   "what_study"
     t.integer  "how_hear_about_day"

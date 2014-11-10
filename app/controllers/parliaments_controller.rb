@@ -1,21 +1,16 @@
 class ParliamentsController < ApplicationController
-  before_action :set_parliament, only: [:show, :edit, :update, :destroy]
+  before_action :set_parliament, only: [:show, :edit, :update]
+  before_action :check_user_has_access, only: [:show, :edit]
 
   # GET /parliaments
   # GET /parliaments.json
   def index
-    @parliaments = Parliament.all
     @parliament = Parliament.new
   end
 
   # GET /parliaments/1
   # GET /parliaments/1.json
   def show
-  end
-
-  # GET /parliaments/new
-  def new
-    @parliament = Parliament.new
   end
 
   # GET /parliaments/1/edit
@@ -26,9 +21,10 @@ class ParliamentsController < ApplicationController
   # POST /parliaments.json
   def create
     @parliament = Parliament.new(parliament_params)
-
+    binding.pry
     respond_to do |format|
       if @parliament.save
+        session[:id] = @parliament.id
         format.html { redirect_to @parliament, notice: 'Din søknad er nå sendt.' }
         format.json { render action: 'show', status: :created, location: @parliament }
       else
@@ -52,20 +48,14 @@ class ParliamentsController < ApplicationController
     end
   end
 
-  # DELETE /parliaments/1
-  # DELETE /parliaments/1.json
-  def destroy
-    @parliament.destroy
-    respond_to do |format|
-      format.html { redirect_to parliaments_url }
-      format.json { head :no_content }
-    end
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_parliament
-      @parliament = Parliament.find(params[:id])
+      @parliament = Parliament.find_by_id(params[:id])
+    end
+
+    def check_user_has_access
+      redirect_to root_path if @parliament.id != session[:id]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

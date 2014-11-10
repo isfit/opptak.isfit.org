@@ -1,6 +1,6 @@
 OpptakIsfitOrg::Application.routes.draw do
   resources :applicant_users, except: [ :new]
-  root to: "frontpage#index"
+  root to: "parliaments#index"
   
   get 'section/:id'  => "positions#section", as: "section"
   get 'group/:id'  => "positions#group", as: "positions_group"
@@ -16,7 +16,7 @@ OpptakIsfitOrg::Application.routes.draw do
     end
   end 
 
-  resources :parliaments
+  resources :parliaments, except: [:new]
 
   get "it-utvikler", to: "positions#show", defaults: { id: 513 }
 
