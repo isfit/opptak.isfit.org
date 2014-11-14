@@ -59,6 +59,6 @@ class ParliamentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def parliament_params
-      params.require(:parliament).permit(:name, :email, :years_work_lost, :place_of_study, :remember_date, :why_attend, :created_at, :updated_at, :why_ip_relevant, :what_study, :how_hear_about_day, :how_corrupt, :had_cimilar_experience, :how_corrupt_tgi)
+      params.require(:parliament).permit(:name, :email, :years_work_lost, :place_of_study, :remember_date, :why_attend, :created_at, :updated_at, :why_ip_relevant, :what_study, :how_hear_about_day, :how_hear_about_day_other, :how_corrupt, :had_cimilar_experience, :how_corrupt_tgi)
     end
 end
