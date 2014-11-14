@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029182043) do
+ActiveRecord::Schema.define(version: 20141114071255) do
 
   create_table "applicant_users", force: true do |t|
     t.string   "mail"
@@ -93,7 +93,7 @@ ActiveRecord::Schema.define(version: 20141029182043) do
     t.datetime "updated_at"
     t.string   "why_ip_relevant"
     t.string   "what_study"
-    t.integer  "how_hear_about_day"
+    t.string   "how_hear_about_day"
     t.integer  "how_corrupt"
     t.integer  "had_cimilar_experience"
     t.integer  "how_corrupt_tgi"

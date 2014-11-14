@@ -9,6 +9,7 @@ class CreateParliaments < ActiveRecord::Migration
     	t.string :remember_date
     	t.string :why_attend
 
+
     	t.timestamps
     end
   end

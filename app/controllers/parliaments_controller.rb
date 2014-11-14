@@ -21,7 +21,6 @@ class ParliamentsController < ApplicationController
   # POST /parliaments.json
   def create
     @parliament = Parliament.new(parliament_params)
-    binding.pry
     respond_to do |format|
       if @parliament.save
         session[:id] = @parliament.id

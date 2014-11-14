@@ -7,7 +7,19 @@
   <%= f.input :remember_date, collection: ['Ja!', 'Nei'], as: :radio_buttons, label: 'Kommer du til å huske datoen 13. februar?' %>
   <%= f.input :place_of_study, label: 'Hvor studerer du?' %> <!--, collection: ['NTNU', 'HiST'], as: :radio_buttons %>%> --> 
   <%= f.input :what_study, label: 'Hva studerer du?' %>
-  <%= f.input :how_hear_about_day, label: 'Hvor hørte du om denne dagen?', collection: [['I forelesning',0], ['På skolen/studiested',1], ['Sosiale medier',2], ['Venner',3]], as: :radio_buttons %>
+  <%#= f.input :how_hear_about_day, label: 'Hvordan hørte du om denne dagen?', collection: ['I forelesning', 'På skolen/studiested', 'Sosiale medier', 'Venner'], as: :radio_buttons %>
+  <%#= f.input :how_hear_about_day, inline_label: true, label: false %>
+  <%= f.label 'Hvordan hørte du om denne dagen?', class: 'label_hint' %>
+  <div class="radio">
+  <% ['I forelesning', 'På skolen/studiested', 'Sosiale medier', 'Venner'].each_with_index do |tag| %>
+    <%= radio_button_tag('parliament[how_hear_about_day]', tag)  %>
+    <%= label_tag("parliament_how_hear_about_day_#{tag}", tag) %>
+    <br>
+  <% end %>
+  <%= label_tag("Annet:") %><br>
+  <%= text_field_tag('parliament[how_hear_about_day]') %>
+  </div>
+
   <%= f.input :years_work_lost  , collection: [['50',0], ['55 000',1], ['3',2], ['243',3], ['3000',4], ['102 000',5]], as: :radio_buttons, label: 'Hvor mange Norske årsverk (et års arbeid for en person) tror du går tapt i Norge hvert år?'%>
 
 
