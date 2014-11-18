@@ -1,0 +1,62 @@
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to image_tag("LOGOhvit24px.png"), root_path, class: "navbar-brand" %>
+        </div>
+        <!--
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="nav-link"><%= link_to t("position.positions"), positions_path %></li>
+              <% if current_user.nil? %>
+                <li class="nav-link">
+                  <%= link_to t("position.apply"), apply_positions_path %>
+                </li>
+              <% else %>
+                <li class="nav-link">
+                  <%= link_to t("position.your_application"), applicant_user_path(current_user.id)%>
+                </li>
+              <% end %>
+              <% if language_norwegian? %>
+                <li class="nav-link"><a href="?locale=en">English</a></li>
+              <% else %>
+                <li class="nav-link"><a href="?locale=no">Norsk</a></li>
+              <% end %>
+            </ul>
+          <% if current_user.nil? %>
+            <%= link_to t("layouts.newpassword"), forgotten_password_path, class: "btn btn-custom navbar-btn navbar-right" %>
+            <%= simple_form_for(:signin, url: signin_path, method: "POST", :defaults => { :input_html => { :class => "form-control" } },  :html => { :class => "navbar-form navbar-right" }) do |f| %>
+
+              <div class="form-group">
+                <%= f.input :mail, placeholder: t("layouts.email"), label: false %>
+              </div>
+              <div class="form-group">
+                <%= f.input :password, placeholder: t("layouts.password"), label: false %>
+              </div> 
+
+              <%= f.button :submit, t("layouts.login"), class: "btn btn-custom btn-login" %>
+            <% end %>
+          <% else %>
+            
+
+            <p class="navbar-text navbar-right">
+            Logged in as 
+            <% if current_user.applicant.nil? %>
+              <%= current_user.mail %>
+            <% else %>
+              <%= current_user.applicant.full_name %>
+            <% end %> 
+            | <%= link_to "Logout" , logout_path %>
+            </p>
+          <% end %>
+        </div><!--/.navbar-collapse --> 
+      </div>
+    </div>
+
+

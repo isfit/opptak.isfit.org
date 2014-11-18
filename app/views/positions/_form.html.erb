@@ -1,4 +1,4 @@
-<%= simple_form_for(@applicant, defaults: { :disabled => @applicant.locked }, :input_html => {:class => 'form-horizontal', :role => 'form' }, url: {:controller => :positions, :action => :save}) do |f| %>
+  <%= simple_form_for(@applicant, defaults: { :disabled => @applicant.locked }, :input_html => {:class => 'form-horizontal', :role => 'form' }, url: {:controller => :positions, :action => :save}) do |f| %>
 <div class="row">
 <div class="col-md-4">
   <fieldset>

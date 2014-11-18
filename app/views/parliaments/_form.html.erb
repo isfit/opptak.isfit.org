@@ -1,0 +1,86 @@
+<%= simple_form_for(@parliament,
+  html: { class: 'form-horizontal' }) do |f| %>
+
+  <%= f.input :name, placeholder: 'Ola Nordmann' %>
+  <%= f.input :email, placeholder: 'name@example.com' %>
+  <%= f.input :why_ip_relevant, label: 'Hvorfor tror du det er relevant for norske studenter å være med på ISFiT Parliament?', as: :text %>
+  <%= f.input :remember_date, collection: ['Ja!', 'Nei'], as: :radio_buttons, label: 'Kommer du til å huske datoen 13. februar?' %>
+  <%= f.input :place_of_study, label: 'Hvor studerer du?' %> 
+  <%= f.input :what_study, label: 'Hva studerer du?' %>
+  <%= f.input :how_hear_about_day, label: 'Hvordan hørte du om denne dagen?', collection: ['I forelesning', 'På skolen/studiested', 'Sosiale medier', 'Venner'], as: :radio_buttons %>
+
+
+  <%= label_tag("parliament_how_hear_about_day_other","Annet:", class: 'unbold') %>
+  <%= text_field_tag("parliament[how_hear_about_day_other]", )%>
+
+
+  <%= f.input :years_work_lost  , collection: [['50',0], ['55 000',1], ['3',2], ['243',3], ['3000',4], ['102 000',5]], as: :radio_buttons, label: 'Hvor mange Norske årsverk (et års arbeid for en person) tror du går tapt i Norge hvert år?'%>
+
+
+  <%= f.label 'Hvor korrupt er denne hendelsen?', class: 'label_hint' %>
+  <%= f.hint 'Sist jeg søkte jobb sto det mellom meg og en annen som skulle få jobben. Vi hadde deltatt i gruppeintervjuer sammen, og følte at jeg var best kvalifisert. Likevel fikk jeg ikke jobben og noen måneder senere oppdaget jeg ved en tilfeldighet at den som ble ansatt var i familie med en i ledelsen. ', class: 'test' %>
+  <div class="radio">
+  <% ['Ikke korrupt', 'Litt korrupt', 'Korrupt', 'Veldig korrupt', 'Ekstremt korrupt'].each_with_index do |tag, index| %>
+    <%= radio_button_tag('parliament[how_corrupt]', index)  %>
+    <%= label_tag("parliament_how_corrupt_#{index}", tag) %>
+    <br>
+  <% end %>
+  </div>
+
+  <%= f.label 'Har du opplevd en lignende hendelse selv?', class: 'label_hint_for_default_form' %>
+  <%= f.hint 'Enten som den som blir ansatt eller den som ikke blir det.', class: 'test' %>
+  <div class="radio">
+  <% ['Ja', 'Nei'].each_with_index do |tag, index| %>
+    <%= radio_button_tag('parliament[had_cimilar_experience]', index) %>
+    <%= label_tag("parliament_had_cimilar_experience_#{index}", tag) %>
+    <br>
+  <% end %>
+  </div>
+  <%#= f.collection_radio_buttons :had_cimilar_experience, [['Ja'], ['Nei']], :first, :last, class: 'hint_hint_1' do |radio_button|
+      ('<div>' + radio_button.radio_button + radio_button.label + '</div>').html_safe
+    end
+
+   %>
+
+  <%= f.label 'Grader denne korrupsjonshistorien fra ', class: 'label_hint_for_default_form'%>
+  <%= f.hint 'In my country, we have a concept of BPL (Below Poverty Line) and APL (Above Poverty Line) families. Under various government schemes BPL families get many benefits. On paper it looks like an amazing concept but in operation it is one of the worst because of corruption at stage. Once my neighbor went to get his BPL card but he was denied by the officials as they asked for bribe and this man refused to give because he had no money to give. Because of this he was deprived of all these benefits from government schemes.', class: 'test'%>
+  <div class="radio">
+  <% ['Ikke korrupt', 'Litt korrupt', 'Korrupt', 'Veldig korrupt', 'Ekstremt korrupt'].each_with_index do |tag, index| %>
+    <%= radio_button_tag('parliament[how_corrupt_tgi]', index)  %>
+    <%= label_tag("parliament_how_corrupt_tgi_#{index}", tag) %>
+    <br>
+  <% end %>
+  </div>
+  <%#= f.collection_radio_buttons  :how_corrupt_tgi, [['Ikke korrupt'],['Litt korrupt'],['Korrupt'],['Veldig korrupt'],['Ekstremt korrupt']], :first,:last, class: 'hint_hint_1' do |radio_button|
+       ('<div>' + radio_button.radio_button + radio_button.label + '</div>').html_safe
+    end%>
+
+  <%= f.label 'Hvorfor har du lyst til å delta på ISFiT Parliament?', class: 'label_hint_for_default_form'  %>
+  <%= f.hint 'Skriv et avsnitt om hvorfor du interesserer deg for å bekjempe korrupsjon',  class: 'test'  %>
+  <%= f.text_area :why_attend, class: 'hint_hint' %><br>
+
+  <% submit_name = params['action'].eql?('index') ? 'Send søknad' : 'Oppdater søknad' %>
+  <%= f.button :submit, submit_name, class: "my_button"  %>
+
+  <br>
+<% end %>
+
+<!--
+<%= form_for(@parliament) do |f| %>
+  <% if @parliament.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@parliament.errors.count, "error") %> prohibited this parliament from being saved:</h2>
+
+      <ul>
+      <% @parliament.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+-->
