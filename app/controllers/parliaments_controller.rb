@@ -1,3 +1,4 @@
+# encoding: utf-8
 class ParliamentsController < ApplicationController
   before_action :set_parliament, only: [:show, :edit, :update]
   before_action :check_user_has_access, only: [:show, :edit]
