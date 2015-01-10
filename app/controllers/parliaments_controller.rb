@@ -27,7 +27,7 @@ class ParliamentsController < ApplicationController
         format.html { redirect_to @parliament, notice: 'Din søknad er nå sendt.' }
         format.json { render action: 'show', status: :created, location: @parliament }
       else
-        format.html { render action: 'new' }
+        format.html { render action: 'index' }
         format.json { render json: @parliament.errors, status: :unprocessable_entity }
       end
     end

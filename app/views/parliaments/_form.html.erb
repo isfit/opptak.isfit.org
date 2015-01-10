@@ -1,7 +1,20 @@
 <%= simple_form_for(@parliament,
   html: { class: 'form-horizontal' }) do |f| %>
 
-  <%= f.input :name, placeholder: 'Ola Nordmann' %>
+      <% if @parliament.errors.any? %>
+        <div id="error_explanation">
+
+          <h2><%= @parliament.errors.count %> feil gjør at søknaden ikke kan sendes:</h2>
+
+          <ul>
+            <% @parliament.errors.full_messages.each do |parliament| %>
+                <li><%= parliament %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+  <%= f.input :name, label: 'Navn', placeholder: 'Ola Nordmann' %>
   <%= f.input :email, placeholder: 'name@example.com' %>
   <%= f.input :why_ip_relevant, label: 'Hvorfor tror du det er relevant for norske studenter å være med på ISFiT Parliament?', as: :text %>
   <%= f.input :remember_date, collection: ['Ja!', 'Nei'], as: :radio_buttons, label: 'Kommer du til å huske datoen 13. februar?' %>

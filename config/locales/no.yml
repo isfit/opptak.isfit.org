@@ -321,6 +321,8 @@
         invalid: har ikke riktig format
         not_a_number: må bestå av tall
         taken: er allerede registrert
+        too_long: feltet er for langt
+
       models:
         applicant:
           attributes:
@@ -335,9 +337,15 @@
         alumni_reservation:
           attributes:
             phone:
+
     attributes:
       firstname:
         blank: "Tull"
+      parliament:
+        name: "Navn"
+        why_ip_relevant: '"Hvorfor tror du det er relevant for norske studenter å være med på ISFiT Parliament?"'
+        place_of_study: '"Hvor studerer du?"'
+        what_study: '"Hva studerer du?"'
   errors:
     description: "feil forhindret skjemaet fra å bli sendt"
     count: "feil"

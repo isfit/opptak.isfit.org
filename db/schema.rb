@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141114174718) do
+ActiveRecord::Schema.define(version: 20150109123755) do
 
   create_table "applicant_users", force: true do |t|
     t.string   "mail"
@@ -88,16 +88,17 @@ ActiveRecord::Schema.define(version: 20141114174718) do
     t.integer  "years_work_lost"
     t.string   "place_of_study"
     t.string   "remember_date"
-    t.string   "why_attend"
+    t.text     "why_attend"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "why_ip_relevant"
+    t.text     "why_ip_relevant"
     t.string   "what_study"
     t.string   "how_hear_about_day"
     t.integer  "how_corrupt"
     t.integer  "had_cimilar_experience"
     t.integer  "how_corrupt_tgi"
     t.string   "how_hear_about_day_other"
+    t.integer  "status"
   end
 
   create_table "positions", id: false, force: true do |t|

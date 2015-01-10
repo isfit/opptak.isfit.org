@@ -34,7 +34,7 @@ p.help-block {
 
 }
 .my_button {
-	background: #EFAB44;	
+	background: #FF742A;	
 }
 .hint_hint_1 {
 	padding-top: 7px;
@@ -53,4 +53,16 @@ label.had_cimilar_experience_ja{
 }
 .unbold{
 	font-weight: normal;
+}
+
+#error_explanation h2{
+	background-color: #FF742A !important;
+	background: #FF742A !important;
+	border: #FF742A !important;
+}
+
+#error_explanation {
+	border: #FF742A !important;
+	border-width: 1px !important;
+	border-style: solid !important;
 }
