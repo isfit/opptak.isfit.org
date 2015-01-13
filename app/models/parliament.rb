@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Parliament < ActiveRecord::Base
 	validates :name, presence: { :message => "må fylles" }, length: { maximum: 255, too_long: "feltet er for langt. %{count} tegn er maks" }	
 	validates :email, presence: true, length: { maximum: 255, too_long: "feltet er for langt. %{count} tegn er maks" }
