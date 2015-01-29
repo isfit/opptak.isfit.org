@@ -1,6 +1,12 @@
 <%= simple_form_for(@parliament,
   html: { class: 'form-horizontal' }) do |f| %>
-
+  <%= link_to "http://www.isfit.org/tabs/be-a-part-of-isfit#96" do %>
+  <div class="col-md-12">
+    <div class="well well-lg">
+      <h3>Vil du vite mer om ISFiT Parliament før du søker, finner du informasjon ved å trykke her</h2> 
+    </div>
+    </div>
+  <% end %>
       <% if @parliament.errors.any? %>
         <div id="error_explanation">
 
@@ -13,7 +19,7 @@
           </ul>
         </div>
     <% end %>
-
+<div class="col-md-12">
   <%= f.input :name, label: 'Navn', placeholder: 'Ola Nordmann' %>
   <%= f.input :email, placeholder: 'name@example.com' %>
   <%= f.input :why_ip_relevant, label: 'Hvorfor tror du det er relevant for norske studenter å være med på ISFiT Parliament?', as: :text %>
@@ -76,6 +82,8 @@
   <%= f.button :submit, submit_name, class: "my_button"  %>
 
   <br>
+
+</div>
 <% end %>
 
 <!--
